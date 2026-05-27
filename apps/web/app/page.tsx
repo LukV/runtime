@@ -1,3 +1,5 @@
+import { Wordmark } from './_components/Wordmark'
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-6 py-16 gap-10">
@@ -5,18 +7,7 @@ export default function Home() {
         Block 1 · brand system in code
       </p>
 
-      <h1
-        style={{
-          color: 'var(--color-inkt)',
-          fontFamily: 'var(--font-wordmark)',
-          fontWeight: 500,
-          fontSize: '4.5rem',
-          letterSpacing: '-0.02em',
-          lineHeight: 1,
-        }}
-      >
-        runtime<span style={{ color: 'var(--color-eerste-licht)' }}>.</span>
-      </h1>
+      <Wordmark size="splash" />
 
       <section className="flex flex-col gap-5 max-w-md w-full">
         <p
@@ -32,9 +23,9 @@ export default function Home() {
         </p>
 
         <p style={{ color: 'var(--color-houtskool)', fontSize: '1.0625rem', lineHeight: 1.55 }}>
-          Houd het comfortabel zwaar. Body in Inter Regular at 17pt. The display headline above uses
-          Inter Bold with the two-tone treatment from{' '}
-          <code style={{ color: 'var(--color-inkt)' }}>004 §1</code>.
+          Houd het comfortabel zwaar. The wordmark above — <Wordmark size="inline" /> — is now a
+          component reading from{' '}
+          <code style={{ color: 'var(--color-inkt)' }}>@runtime/design-tokens/wordmark</code>.
         </p>
 
         <p
@@ -61,6 +52,19 @@ export default function Home() {
           12,500m · 4:32 · 184 bpm
         </p>
       </section>
+
+      <div className="flex flex-col items-center gap-3 mt-4">
+        <Wordmark size="header" theme="light" />
+        <div
+          style={{
+            background: 'var(--color-inkt)',
+            padding: '0.75rem 1.25rem',
+            borderRadius: '0.375rem',
+          }}
+        >
+          <Wordmark size="header" theme="dark" />
+        </div>
+      </div>
 
       <div className="flex gap-3 mt-4 flex-wrap justify-center">
         {[

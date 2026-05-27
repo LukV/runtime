@@ -16,8 +16,18 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 *Nothing in cycle yet.*
 
-See the on-deck list below for the next pickup.
+**Block 1 (Brand System in Code) is closed.** Tokens, fonts, and the wordmark component all shipped on 2026-05-27 — see [[pitches/shipped/design-tokens-single-source-of-truth]], [[pitches/shipped/font-integration]], [[pitches/shipped/wordmark-as-component]], and the pre-block-2 scaffold pulled forward in [[pitches/shipped/monorepo-nextjs-supabase-scaffold]].
 
 ## On deck
 
-1. [[pitches/wordmark-as-component]] — *an evening*. Last pitch in Block 1. First real consumer of the tokens + fonts. Inline SVG wordmark with the period as a separate `<circle>`, three sizes, two themes, amber period locked to `Eerste licht` regardless of theme. iOS half drops to a placeholder per its appetite cut #1 — `apps/ios/` still doesn't exist; Block 5 inherits.
+Block 2's remaining pitches, in [[Sequencing]] order:
+
+1. **GitHub Actions CI** — *an evening*. Path-filtered workflows for web/api/ios + manual-trigger `migrations.yml`. Slot in [[blocks/02-website-foundation]].
+2. **Domain + DNS + email auth** — *an evening*. Register `runtime.training`, point at Vercel, configure SPF/DKIM/DMARC for Resend, choose email host.
+3. **Nav + footer as shared components** — *an evening*.
+4. **Page chrome: SEO defaults + metadata helper** — *an evening*.
+5. **Hoe het werkt + Over ons + Privacy** — *a weekend*.
+6. **Plausible integration** — *an evening*.
+7. **Sentry** — *an evening*.
+
+The slot framings in [[blocks/02-website-foundation]] are detailed enough for several of these to start without a full pitch note — write the file when the shape isn't obvious.

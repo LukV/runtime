@@ -32,8 +32,36 @@ Both produce byte-identical output. The script has no external dependencies.
 - `dist/tokens.css` — CSS custom properties on `:root`. Imported once by `apps/web/`'s global stylesheet.
 - `dist/tokens.ts` — typed TypeScript exports (`color`, `spacing`, `type`, `motion`). For Tailwind config, CSS-in-JS, or anywhere TS code needs the values.
 - `dist/Tokens.swift` — `Color` extensions, `Spacing` enum, `Motion` enum for SwiftUI. The iOS app reads this file via an Xcode build-phase script (wired in Block 5).
+- `dist/wordmark.svg` — the runtime wordmark outlined from Source Serif 4 Medium with the amber period as a separate `<circle>`. Hand-readable SVG, useful for design-tool inspection.
+- `dist/wordmark.ts` — the same wordmark as TypeScript: `WORDMARK_PATH`, `WORDMARK_PERIOD`, `WORDMARK_VIEWBOX`. Consumed by `apps/web/app/_components/Wordmark.tsx` and (eventually) the SwiftUI Wordmark in Block 5.
 
 Type tokens are deliberately **not** in `tokens.css` — they're too compound for CSS variables. Consumers reach for `tokens.ts`.
+
+## Regenerating the wordmark
+
+`dist/wordmark.svg` and `dist/wordmark.ts` come from outlining Source Serif 4 Medium glyphs. **Run rarely** — the wordmark rarely changes, the SVG is committed, and the source font is not in the repo.
+
+When you do need to regenerate (font version bump, tracking adjustment, swap to a different family):
+
+```sh
+# Download the variable font (not committed)
+curl -L -o /tmp/SourceSerif4Variable-Roman.ttf \
+  https://raw.githubusercontent.com/adobe-fonts/source-serif/release/VAR/SourceSerif4Variable-Roman.ttf
+
+# Instance at weight 500 (Medium) using fontTools (Python — uv tool install fonttools once)
+uvx --from fonttools fonttools varLib.instancer \
+  -o /tmp/SourceSerif4-Medium-instance.ttf \
+  /tmp/SourceSerif4Variable-Roman.ttf wght=500 opsz=26
+
+# Regenerate
+FONT_PATH=/tmp/SourceSerif4-Medium-instance.ttf \
+  npm run generate:wordmark -w packages/design-tokens
+
+# Clean up
+rm /tmp/SourceSerif4Variable-Roman.ttf /tmp/SourceSerif4-Medium-instance.ttf
+```
+
+The script lives at `scripts/generate-wordmark.mjs` and uses `opentype.js` (the only devDep). Source Serif 4 Medium static OTF is not directly available in the canonical repo — only the variable font — so the fontTools instancing step is required.
 
 ## Naming
 

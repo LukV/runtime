@@ -7,13 +7,19 @@
     "./tokens.css": "./dist/tokens.css",
     "./tokens.ts": "./dist/tokens.ts",
     "./tokens.json": "./tokens.json",
-    "./Tokens.swift": "./dist/Tokens.swift"
+    "./Tokens.swift": "./dist/Tokens.swift",
+    "./wordmark": "./dist/wordmark.ts",
+    "./wordmark.svg": "./dist/wordmark.svg"
   },
   "files": [
     "tokens.json",
     "dist"
   ],
   "scripts": {
-    "generate": "node scripts/generate.mjs"
+    "generate": "node scripts/generate.mjs",
+    "generate:wordmark": "node scripts/generate-wordmark.mjs"
+  },
+  "devDependencies": {
+    "opentype.js": "^1.3.4"
   }
 }
