@@ -1,11 +1,13 @@
 ---
 project: runtime
 type: pitch
-status: ready
+status: shipped
 area: brand-system
 block: brand-system-in-code
 appetite: an evening
 created: 2026-05-27
+started: 2026-05-27
+shipped_on: 2026-05-27
 ---
 # Font integration
 
@@ -202,4 +204,31 @@ That's the connection between the two pitches. The tokens know the *names*; the 
 
 ## What actually happened
 
-*(Fill in when the pitch ships or is dropped.)*
+> *Stub drafted by Claude from the diff — Luk to edit before next ship.*
+
+Shipped the web half cleanly; deferred the iOS half (per appetite cut #2 — `apps/ios/` still doesn't exist; Block 5 inherits the work).
+
+Piece 0 landed first: appended a resolution paragraph to [[../product-design/004-design-system-and-screens#8. Open questions surfaced this pass|004 §8 question #5]] — *wordmark-as-SVG → yes on iOS; web keeps Source Serif loaded so the live-text fallback exists.* That decision unblocks [[wordmark-as-component]].
+
+On the web, three families load via `apps/web/app/layout.tsx`:
+
+- **Inter Variable** — self-hosted in `apps/web/app/fonts/InterVariable.woff2` (352kb, from rsms's canonical build). Loaded via `next/font/local` with `weight: '100 900'` so the variable axis covers every weight from one file. Exposed as `var(--font-inter)` and applied to `body` in `globals.css` with `font-feature-settings: 'cv11' 1, 'tnum' 1` per 004 §1.
+- **Source Serif 4 Medium** — `next/font/google` with `weight: '500'`. Exposed as `var(--font-wordmark)` and applied only to the wordmark in the smoke screen. The web wordmark stays live text in this pitch; [[wordmark-as-component]] decides whether the production component renders SVG or live text on web.
+- **JetBrains Mono** — `next/font/google` with `weight: ['400', '500']`. Exposed as `var(--font-mono)`.
+
+The hybrid (`local` for Inter, `google` for the other two) is a deviation from the pitch's primary plan, which named `next/font/local` for all three. Reason: in Next 15, **`next/font/google` self-hosts at build time** — Next downloads the woff2 during `next build`, hashes it, serves it from `/_next/static/media/`, and never makes a runtime request to Google. Privacy-wise it's identical to `next/font/local`. So the pitch's cut #1 (*"drop self-hosting to Google CDN"*) was based on an outdated model of how `next/font/google` works; the modern reality is that cut #1 IS self-hosting, just with less file-management on our side. Inter stayed local because the canonical rsms build (a single variable woff2) is meaningfully nicer than Google's subsetted Inter files, and we already had it.
+
+The smoke screen on `/` now renders every type role from 004 §1: the wordmark in Source Serif 4 Medium with the amber period, the *"Tempo. 8 km."* display headline in Inter Bold two-tone (Inkt + Steen), Inter body and label caps, and a JetBrains Mono numerics line (*12,500m · 4:32 · 184 bpm*). Build is clean: 1.6s Next compile, 4 static pages, 6 woff2 files in `/_next/static/media/`.
+
+Piece 4 was already done — the *"How fonts connect"* paragraph in `packages/design-tokens/README.md` was written ahead during the design-tokens pitch. This pitch updated it: bare wikilinks `[[font-integration]]`/`[[wordmark-as-component]]` instead of relative paths that'd break when pitch files move to `shipped/`.
+
+What was cut: the iOS half entirely (no `apps/ios/` exists yet). When Block 5 picks up:
+
+- Inter Variable TTF + JetBrains Mono Variable TTF get dropped into `apps/ios/Runtime/Fonts/`.
+- `UIAppFonts` entry in `Info.plist`.
+- A SwiftUI `Font` extension exposes them via `.custom("Inter", size:)` etc.
+- Source Serif 4 is **not** bundled on iOS — wordmark is inline SVG per the now-resolved 004 §8 #5.
+
+Risk that landed: the `cv11` feature is on by default per the pitch. If at any point the lowercase `a` reads wrong, flip it off in `globals.css`. Easier to flip off later than to flip on retroactively.
+
+No surprises. Release step skipped per the ongoing pattern (commitizen is configured at `.cz.toml` now; first `cz bump` is still pending the initial commit).

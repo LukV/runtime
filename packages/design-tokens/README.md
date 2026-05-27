@@ -48,7 +48,7 @@ The kebab → camel mapping happens in the generator, so the JSON key is the onl
 
 ## How fonts connect
 
-The `type` tokens name font families (`Source Serif 4`, `Inter`, `JetBrains Mono`). The fonts themselves are integrated separately — in `apps/web/app/layout.tsx` via `next/font/local` and in `apps/ios/Runtime/Fonts/` via `Info.plist` registration. If you add or change a font, update *both* this token file and the platform-specific integration. See [[../../docs/planning/pitches/font-integration]].
+The `type` tokens name font families (`Source Serif 4`, `Inter`, `JetBrains Mono`). The fonts themselves are integrated separately — in `apps/web/app/layout.tsx` via `next/font` (Inter Variable self-hosted from rsms; Source Serif 4 and JetBrains Mono via `next/font/google`, which in Next 15 self-hosts at build time). iOS bundles Inter and JetBrains Mono only — Source Serif lives as an inline SVG on iOS, never as a font (resolved in [[font-integration]] and [[wordmark-as-component]]). If you add or change a font, update *both* this token file and the platform-specific integration.
 
 ## Out of scope (v0)
 

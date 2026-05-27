@@ -20,5 +20,4 @@ See the on-deck list below for the next pickup.
 
 ## On deck
 
-1. [[pitches/font-integration]] — *an evening*. Inter + JetBrains Mono + Source Serif 4 Medium on web via `next/font/local`, plus iOS bundling (Inter + JetBrains Mono only; Source Serif lives as inline SVG per the wordmark decision). `apps/web/` is ready for it.
-2. [[pitches/wordmark-as-component]] — *an evening*. First real consumer of the tokens + fonts. Inline SVG wordmark, three sizes, two themes, locked amber period.
+1. [[pitches/wordmark-as-component]] — *an evening*. Last pitch in Block 1. First real consumer of the tokens + fonts. Inline SVG wordmark with the period as a separate `<circle>`, three sizes, two themes, amber period locked to `Eerste licht` regardless of theme. iOS half drops to a placeholder per its appetite cut #1 — `apps/ios/` still doesn't exist; Block 5 inherits.

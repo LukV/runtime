@@ -11,11 +11,17 @@ body {
   background: var(--color-krijt);
   color: var(--color-houtskool);
   font-family:
+    var(--font-inter),
     ui-sans-serif,
     system-ui,
     -apple-system,
-    BlinkMacSystemFont,
     sans-serif;
+  /* Inter setup per 004 §1: cv11 (single-storey `a`) closer to ABC Diatype,
+     tnum (tabular numerics) for any data alignment outside the JetBrains Mono
+     blocks. Easier to disable cv11 later than to enable it retroactively. */
+  font-feature-settings:
+    'cv11' 1,
+    'tnum' 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
