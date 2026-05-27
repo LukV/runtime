@@ -2,7 +2,7 @@
 project: runtime
 type: planning-index
 status: active
-updated: 2026-05-26
+updated: 2026-05-27
 ---
 # Betting Table
 
@@ -16,7 +16,7 @@ Architecture and stack decisions live in [[../architecture/001-stack-decisions]]
 
 | #  | Block | Status | Where the pitches live |
 |----|-------|--------|------------------------|
-| 1  | Brand System in Code | not started | [[blocks/01-brand-system-in-code]] |
+| 1  | Brand System in Code | in progress (3 of 5 slots shipped) | [[blocks/01-brand-system-in-code]] |
 | 2  | Website Foundation | not started | [[blocks/02-website-foundation]] |
 | 3  | Race Calendar | not started | [[blocks/03-race-calendar]] |
 | 4  | Pilot Intake | not started | [[blocks/04-pilot-intake]] |

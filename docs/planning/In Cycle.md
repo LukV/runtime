@@ -2,7 +2,7 @@
 project: runtime
 type: planning-current-cycle
 status: active
-updated: 2026-05-26
+updated: 2026-05-27
 ---
 # In Cycle
 
@@ -16,7 +16,12 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 *Nothing in cycle yet.*
 
-**Block 1 (Brand System in Code) is closed.** Tokens, fonts, and the wordmark component all shipped on 2026-05-27 — see [[pitches/shipped/design-tokens-single-source-of-truth]], [[pitches/shipped/font-integration]], [[pitches/shipped/wordmark-as-component]], and the pre-block-2 scaffold pulled forward in [[pitches/shipped/monorepo-nextjs-supabase-scaffold]].
+**Block 1 (Brand System in Code) is partially shipped.** Tokens, fonts, and the wordmark component shipped on 2026-05-27 — see [[pitches/shipped/design-tokens-single-source-of-truth]], [[pitches/shipped/font-integration]], [[pitches/shipped/wordmark-as-component]], plus the pre-block-2 scaffold pulled forward in [[pitches/shipped/monorepo-nextjs-supabase-scaffold]].
+
+**Still open in block 1:**
+
+- **The race ribbon component** — *an evening*. Slot framed in [[blocks/01-brand-system-in-code]]. Needed before [[blocks/05-ios-app-downsized]]; block 2 doesn't depend on it. Can land anywhere between now and block 5.
+- **App icon assets at every size** — *an evening*. iOS-only. No web consumer. Probably defers to the start of block 5.
 
 ## On deck
 
