@@ -1,0 +1,68 @@
+// AUTO-GENERATED FROM tokens.json — DO NOT EDIT
+
+export const color = {
+  "veldgroen": "#7B9D7A",
+  "eerste-licht": "#E8A65A",
+  "inkt": "#0D1014",
+  "krijt": "#F6F5F1",
+  "mist": "#6B7680",
+  "stof": "#EFEDE5",
+  "nacht": "#1B2531",
+  "steen": "#8C8678",
+  "houtskool": "#3A4A52"
+} as const
+
+export const spacing = {
+  "1": 4,
+  "2": 8,
+  "3": 12,
+  "4": 16,
+  "5": 22,
+  "6": 30,
+  "7": 36,
+  "8": 44
+} as const
+
+export const type = {
+  "wordmark": {
+    "family": "Source Serif 4",
+    "weight": 500,
+    "tracking": "-0.02em",
+    "size-header": 26,
+    "size-splash": 38
+  },
+  "display": {
+    "family": "Inter",
+    "weight": 700,
+    "tracking": "-0.04em",
+    "size-min": 52,
+    "size-max": 56
+  },
+  "body": {
+    "family": "Inter",
+    "weight": 400,
+    "size": 17
+  },
+  "label": {
+    "family": "Inter",
+    "weight": 500,
+    "tracking": "0.15em",
+    "size-min": 10,
+    "size-max": 11
+  },
+  "numeric": {
+    "family": "JetBrains Mono",
+    "weight": 500,
+    "tracking": "-0.04em",
+    "size-min": 14,
+    "size-max": 56
+  }
+} as const
+
+export const motion = {
+  "transition": "220ms ease-out"
+} as const
+
+export type ColorName = keyof typeof color
+export type SpacingStep = keyof typeof spacing
+export type TypeRole = keyof typeof type

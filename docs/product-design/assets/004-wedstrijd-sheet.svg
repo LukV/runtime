@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1000" height="1000" fill="#EAE6DC"/>
+  <text x="40" y="40" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500">WEDSTRIJD SHEET · NOT YET REGISTERED · AND · REGISTERED</text>
+
+  <g transform="translate(55, 70)">
+    <rect x="0" y="0" width="390" height="844" rx="55" fill="#3A3530"/>
+    <rect x="6" y="6" width="378" height="832" rx="50" fill="#2A2A2A"/>
+    <clipPath id="ws-a"><rect x="6" y="6" width="378" height="832" rx="50"/></clipPath>
+
+    <g clip-path="url(#ws-a)">
+      <rect x="6" y="6" width="378" height="832" fill="#0D1014" fill-opacity="0.55"/>
+      <rect x="6" y="80" width="378" height="752" rx="18" fill="#F6F5F1"/>
+
+      <rect x="180" y="98" width="30" height="4" rx="2" fill="#C3BCAE"/>
+
+      <text x="30" y="142" font-size="10" letter-spacing="1.5" fill="#6B7680">ZONDAG 30 AUGUSTUS · 9:00</text>
+      <text x="30" y="184" font-size="28" font-weight="700" letter-spacing="-1.1" fill="#0D1014">Stadsloop</text>
+      <text x="30" y="218" font-size="28" font-weight="700" letter-spacing="-1.1" fill="#0D1014">Mechelen</text>
+
+      <circle cx="348" cy="160" r="15" fill="#EFEDE5"/>
+      <line x1="343" y1="155" x2="353" y2="165" stroke="#0D1014" stroke-width="1.5"/>
+      <line x1="353" y1="155" x2="343" y2="165" stroke="#0D1014" stroke-width="1.5"/>
+
+      <rect x="30" y="250" width="158" height="60" rx="10" fill="#EFEDE5"/>
+      <text x="46" y="272" font-size="10" letter-spacing="1.5" fill="#6B7680">AFSTAND</text>
+      <text x="46" y="298" font-size="22" font-weight="500" fill="#0D1014" font-family="'JetBrains Mono', monospace" letter-spacing="-1">10</text>
+      <text x="80" y="298" font-size="11" fill="#6B7680">km</text>
+
+      <rect x="200" y="250" width="160" height="60" rx="10" fill="#EFEDE5"/>
+      <text x="216" y="272" font-size="10" letter-spacing="1.5" fill="#6B7680">TERREIN</text>
+      <text x="216" y="296" font-size="16" font-weight="600" fill="#0D1014">Weg · vlak</text>
+
+      <rect x="30" y="320" width="330" height="62" rx="10" fill="#EFEDE5"/>
+      <text x="46" y="342" font-size="10" letter-spacing="1.5" fill="#6B7680">PARCOURS</text>
+      <text x="46" y="360" font-size="12" fill="#1B2531">Start Grote Markt. Door de stad richting de</text>
+      <text x="46" y="374" font-size="12" fill="#1B2531">Vesten. Lichte klim aan km 7. Finish: Dijle.</text>
+
+      <rect x="30" y="392" width="330" height="62" rx="10" fill="#EFEDE5"/>
+      <text x="46" y="414" font-size="10" letter-spacing="1.5" fill="#6B7680">ORGANISATIE</text>
+      <text x="46" y="432" font-size="12" fill="#1B2531">Atletiekclub Mechelen. Twintigste editie.</text>
+      <text x="46" y="446" font-size="12" fill="#1B2531">2.400 lopers vorig jaar.</text>
+
+      <rect x="30" y="476" width="330" height="160" rx="12" fill="#0D1014"/>
+      <circle cx="46" cy="500" r="3" fill="#E8A65A"/>
+      <text x="58" y="504" font-size="10" letter-spacing="1.5" fill="#E8A65A">INSCHRIJVING · NOG TE DOEN</text>
+      <text x="46" y="534" font-size="14" fill="#F6F5F1">Je doel staat. Voor de wedstrijd</text>
+      <text x="46" y="552" font-size="14" fill="#F6F5F1">zelf moet je nog langs Chronorace.</text>
+
+      <rect x="46" y="572" width="298" height="40" rx="20" fill="#7B9D7A"/>
+      <text x="195" y="598" font-size="13" font-weight="700" fill="#0D1014" text-anchor="middle">Inschrijven op chronorace.be ↗</text>
+      <text x="195" y="626" font-size="11" fill="#6B7680" text-anchor="middle">Opent in Safari · €14 inschrijfgeld</text>
+    </g>
+  </g>
+
+  <g transform="translate(555, 70)">
+    <rect x="0" y="0" width="390" height="844" rx="55" fill="#3A3530"/>
+    <rect x="6" y="6" width="378" height="832" rx="50" fill="#2A2A2A"/>
+    <clipPath id="ws-b"><rect x="6" y="6" width="378" height="832" rx="50"/></clipPath>
+
+    <g clip-path="url(#ws-b)">
+      <rect x="6" y="6" width="378" height="832" fill="#0D1014" fill-opacity="0.55"/>
+      <rect x="6" y="80" width="378" height="752" rx="18" fill="#F6F5F1"/>
+
+      <rect x="180" y="98" width="30" height="4" rx="2" fill="#C3BCAE"/>
+
+      <text x="30" y="142" font-size="10" letter-spacing="1.5" fill="#6B7680">ZONDAG 30 AUGUSTUS · 9:00</text>
+      <text x="30" y="184" font-size="28" font-weight="700" letter-spacing="-1.1" fill="#0D1014">Stadsloop</text>
+      <text x="30" y="218" font-size="28" font-weight="700" letter-spacing="-1.1" fill="#0D1014">Mechelen</text>
+
+      <circle cx="348" cy="160" r="15" fill="#EFEDE5"/>
+      <line x1="343" y1="155" x2="353" y2="165" stroke="#0D1014" stroke-width="1.5"/>
+      <line x1="353" y1="155" x2="343" y2="165" stroke="#0D1014" stroke-width="1.5"/>
+
+      <rect x="30" y="250" width="158" height="60" rx="10" fill="#EFEDE5"/>
+      <text x="46" y="272" font-size="10" letter-spacing="1.5" fill="#6B7680">AFSTAND</text>
+      <text x="46" y="298" font-size="22" font-weight="500" fill="#0D1014" font-family="'JetBrains Mono', monospace" letter-spacing="-1">10</text>
+      <text x="80" y="298" font-size="11" fill="#6B7680">km</text>
+
+      <rect x="200" y="250" width="160" height="60" rx="10" fill="#EFEDE5"/>
+      <text x="216" y="272" font-size="10" letter-spacing="1.5" fill="#6B7680">TERREIN</text>
+      <text x="216" y="296" font-size="16" font-weight="600" fill="#0D1014">Weg · vlak</text>
+
+      <rect x="30" y="320" width="330" height="62" rx="10" fill="#EFEDE5"/>
+      <text x="46" y="342" font-size="10" letter-spacing="1.5" fill="#6B7680">PARCOURS</text>
+      <text x="46" y="360" font-size="12" fill="#1B2531">Start Grote Markt. Door de stad richting de</text>
+      <text x="46" y="374" font-size="12" fill="#1B2531">Vesten. Lichte klim aan km 7. Finish: Dijle.</text>
+
+      <rect x="30" y="392" width="330" height="62" rx="10" fill="#EFEDE5"/>
+      <text x="46" y="414" font-size="10" letter-spacing="1.5" fill="#6B7680">ORGANISATIE</text>
+      <text x="46" y="432" font-size="12" fill="#1B2531">Atletiekclub Mechelen. Twintigste editie.</text>
+      <text x="46" y="446" font-size="12" fill="#1B2531">2.400 lopers vorig jaar.</text>
+
+      <rect x="30" y="476" width="330" height="100" rx="12" fill="#0D1014"/>
+      <circle cx="46" cy="500" r="3" fill="#7B9D7A"/>
+      <text x="58" y="504" font-size="10" letter-spacing="1.5" fill="#7B9D7A">INSCHRIJVING · BEVESTIGD</text>
+      <text x="46" y="534" font-size="14" fill="#F6F5F1">Startnummer </text>
+      <text x="124" y="534" font-size="14" font-weight="500" fill="#F6F5F1" font-family="'JetBrains Mono', monospace">#1842</text>
+      <text x="172" y="534" font-size="14" fill="#F6F5F1">· Wave 9:00.</text>
+      <text x="46" y="556" font-size="14" fill="#F6F5F1">Het werk loopt.</text>
+
+      <text x="195" y="600" font-size="11" fill="#6B7680" text-anchor="middle">96 dagen tot start · An stuurt 's avonds de briefing</text>
+    </g>
+  </g>
+</svg>

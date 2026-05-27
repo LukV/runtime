@@ -1,0 +1,345 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 3800" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="3800" fill="#EAE6DC"/>
+  <text x="40" y="40" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500">RUNTIME.TRAINING · CALENDAR-FIRST LANDING · DESKTOP 1100PX</text>
+
+  <!-- browser chrome -->
+  <g transform="translate(50, 70)">
+    <rect x="0" y="0" width="1100" height="40" rx="8" fill="#D8D5CB"/>
+    <circle cx="20" cy="20" r="5" fill="#FF6058"/>
+    <circle cx="40" cy="20" r="5" fill="#FFBD2E"/>
+    <circle cx="60" cy="20" r="5" fill="#28C840"/>
+    <rect x="300" y="10" width="500" height="20" rx="10" fill="#F6F5F1"/>
+    <text x="320" y="24" font-size="11" fill="#6B7680" font-family="'JetBrains Mono', monospace">runtime.training</text>
+  </g>
+
+  <!-- page -->
+  <g transform="translate(50, 110)">
+    <rect x="0" y="0" width="1100" height="3680" fill="#F6F5F1"/>
+
+    <!-- NAV -->
+    <g transform="translate(0, 0)">
+      <line x1="0" y1="60" x2="1100" y2="60" stroke="#D8D5CB" stroke-width="0.5"/>
+      <text x="48" y="38" font-size="22" font-weight="500" letter-spacing="-0.45" fill="#0D1014" font-family="'Tiempos Text', Georgia, serif">runtime<tspan fill="#E8A65A">.</tspan></text>
+
+      <text x="720" y="38" font-size="13" fill="#0D1014" font-weight="600">Kalender</text>
+      <text x="790" y="38" font-size="13" fill="#1B2531">Hoe het werkt</text>
+      <text x="890" y="38" font-size="13" fill="#1B2531">Over ons</text>
+
+      <rect x="970" y="18" width="92" height="32" rx="16" fill="#0D1014"/>
+      <text x="1016" y="38" font-size="12" fill="#F6F5F1" font-weight="600" text-anchor="middle">Krijg de app</text>
+    </g>
+
+    <!-- HERO H1 -->
+    <g transform="translate(0, 120)">
+      <text x="48" y="0" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500">DE KALENDER · MEI 2026</text>
+
+      <text x="48" y="60" font-size="56" font-weight="700" letter-spacing="-1.8" fill="#0D1014">100 wedstrijden</text>
+      <text x="48" y="110" font-size="56" font-weight="700" letter-spacing="-1.8" fill="#0D1014">in Vlaanderen.</text>
+      <text x="48" y="160" font-size="56" font-weight="700" letter-spacing="-1.8" fill="#8C8678">De volgende zes maanden.</text>
+
+      <text x="48" y="210" font-size="16" fill="#3A4A52">Joggings, stadslopen, atletiekevenementen. Hand-gecureerd. Geen reclame,</text>
+      <text x="48" y="232" font-size="16" fill="#3A4A52">geen featured listings. Sorteren op datum, afstand, of provincie.</text>
+
+      <!-- big number -->
+      <text x="1052" y="40" font-size="42" font-weight="500" letter-spacing="-1.3" fill="#0D1014" font-family="'JetBrains Mono', monospace" text-anchor="end">100</text>
+      <text x="1052" y="62" font-size="11" letter-spacing="1.5" fill="#6B7680" text-anchor="end">WEDSTRIJDEN</text>
+      <text x="1052" y="120" font-size="42" font-weight="500" letter-spacing="-1.3" fill="#0D1014" font-family="'JetBrains Mono', monospace" text-anchor="end">5</text>
+      <text x="1052" y="142" font-size="11" letter-spacing="1.5" fill="#6B7680" text-anchor="end">PROVINCIES</text>
+      <text x="1052" y="170" font-size="11" letter-spacing="1.5" fill="#6B7680" text-anchor="end">UPDATED 26 MEI</text>
+    </g>
+
+    <!-- FILTERS -->
+    <g transform="translate(0, 380)">
+      <rect x="0" y="0" width="1100" height="58" fill="#EFEDE5"/>
+      <line x1="0" y1="0" x2="1100" y2="0" stroke="#D8D5CB" stroke-width="0.5"/>
+      <line x1="0" y1="58" x2="1100" y2="58" stroke="#D8D5CB" stroke-width="0.5"/>
+
+      <text x="48" y="36" font-size="11" letter-spacing="1.5" fill="#6B7680" font-weight="500">AFSTAND</text>
+
+      <rect x="130" y="18" width="58" height="24" rx="12" fill="#0D1014"/>
+      <text x="159" y="34" font-size="11" font-weight="500" fill="#F6F5F1" text-anchor="middle">Alles</text>
+
+      <rect x="196" y="18" width="56" height="24" rx="12" fill="#F6F5F1"/>
+      <text x="224" y="34" font-size="11" fill="#0D1014" text-anchor="middle">5 km</text>
+
+      <rect x="260" y="18" width="60" height="24" rx="12" fill="#F6F5F1"/>
+      <text x="290" y="34" font-size="11" fill="#0D1014" text-anchor="middle">10 km</text>
+
+      <rect x="328" y="18" width="64" height="24" rx="12" fill="#F6F5F1"/>
+      <text x="360" y="34" font-size="11" fill="#0D1014" text-anchor="middle">Halve</text>
+
+      <rect x="400" y="18" width="80" height="24" rx="12" fill="#F6F5F1"/>
+      <text x="440" y="34" font-size="11" fill="#0D1014" text-anchor="middle">Marathon</text>
+
+      <line x1="500" y1="18" x2="500" y2="42" stroke="#D8D5CB" stroke-width="0.5"/>
+
+      <text x="520" y="36" font-size="11" letter-spacing="1.5" fill="#6B7680" font-weight="500">PROVINCIE</text>
+
+      <rect x="610" y="18" width="88" height="24" rx="12" fill="#F6F5F1"/>
+      <text x="654" y="34" font-size="11" fill="#0D1014" text-anchor="middle">Antwerpen</text>
+
+      <rect x="706" y="18" width="76" height="24" rx="12" fill="#F6F5F1"/>
+      <text x="744" y="34" font-size="11" fill="#0D1014" text-anchor="middle">Oost-Vl.</text>
+
+      <rect x="790" y="18" width="74" height="24" rx="12" fill="#F6F5F1"/>
+      <text x="827" y="34" font-size="11" fill="#0D1014" text-anchor="middle">West-Vl.</text>
+
+      <rect x="872" y="18" width="64" height="24" rx="12" fill="#F6F5F1"/>
+      <text x="904" y="34" font-size="11" fill="#0D1014" text-anchor="middle">Limburg</text>
+
+      <rect x="944" y="18" width="86" height="24" rx="12" fill="#F6F5F1"/>
+      <text x="987" y="34" font-size="11" fill="#0D1014" text-anchor="middle">Vl.-Brabant</text>
+
+      <text x="1052" y="36" font-size="11" fill="#6B7680" text-anchor="end">42 resultaten</text>
+    </g>
+
+    <!-- AUGUSTUS group header -->
+    <g transform="translate(0, 460)">
+      <line x1="0" y1="50" x2="1100" y2="50" stroke="#D8D5CB" stroke-width="0.5"/>
+      <text x="48" y="36" font-size="13" letter-spacing="2.5" fill="#0D1014" font-weight="500" font-family="'JetBrains Mono', monospace">AUGUSTUS 2026</text>
+      <text x="1052" y="36" font-size="11" fill="#6B7680" text-anchor="end">7 wedstrijden</text>
+    </g>
+
+    <!-- Race row 1: Tisselt -->
+    <g transform="translate(0, 510)">
+      <line x1="0" y1="78" x2="1100" y2="78" stroke="#D8D5CB" stroke-width="0.5"/>
+
+      <text x="48" y="40" font-size="32" font-weight="500" letter-spacing="-1" fill="#0D1014" font-family="'JetBrains Mono', monospace">23</text>
+      <text x="84" y="40" font-size="11" letter-spacing="1" fill="#6B7680" font-family="'JetBrains Mono', monospace">AUG</text>
+
+      <text x="180" y="32" font-size="17" font-weight="600" fill="#0D1014">Jogging Tisselt</text>
+      <text x="180" y="54" font-size="12" fill="#6B7680">Tisselt · weg · licht heuvelig · Atletiekclub Klein-Brabant</text>
+
+      <text x="734" y="38" font-size="13" fill="#1B2531" font-family="'JetBrains Mono', monospace">10 km</text>
+      <text x="850" y="38" font-size="13" fill="#6B7680">Antwerpen</text>
+      <text x="1052" y="38" font-size="12" fill="#0D1014" font-weight="600" text-anchor="end">Bekijken →</text>
+    </g>
+
+    <!-- Race row 2: Mechelen (highlighted) -->
+    <g transform="translate(0, 588)">
+      <rect x="0" y="0" width="1100" height="78" fill="#E8A65A" fill-opacity="0.08"/>
+      <rect x="0" y="0" width="3" height="78" fill="#E8A65A"/>
+      <line x1="0" y1="78" x2="1100" y2="78" stroke="#D8D5CB" stroke-width="0.5"/>
+
+      <text x="48" y="40" font-size="32" font-weight="500" letter-spacing="-1" fill="#0D1014" font-family="'JetBrains Mono', monospace">30</text>
+      <text x="84" y="40" font-size="11" letter-spacing="1" fill="#6B7680" font-family="'JetBrains Mono', monospace">AUG</text>
+
+      <text x="180" y="32" font-size="17" font-weight="600" fill="#0D1014">Stadsloop Mechelen</text>
+      <rect x="362" y="18" width="78" height="18" rx="9" fill="#0D1014" fill-opacity="0.06"/>
+      <text x="401" y="32" font-size="10" letter-spacing="1" fill="#6B7680" font-weight="500" text-anchor="middle">20E EDITIE</text>
+      <text x="180" y="54" font-size="12" fill="#6B7680">Mechelen · weg · vlak · Atletiekclub Mechelen · 2.400 lopers vorig jaar</text>
+
+      <text x="734" y="38" font-size="13" fill="#1B2531" font-family="'JetBrains Mono', monospace">10 km</text>
+      <text x="850" y="38" font-size="13" fill="#6B7680">Antwerpen</text>
+      <text x="1052" y="38" font-size="12" fill="#0D1014" font-weight="600" text-anchor="end">Bekijken →</text>
+    </g>
+
+    <!-- ============ APP NUDGE ============ -->
+    <g transform="translate(0, 666)">
+      <rect x="0" y="0" width="1100" height="280" fill="#0D1014"/>
+
+      <circle cx="60" cy="42" r="4" fill="#E8A65A"/>
+      <text x="74" y="46" font-size="11" letter-spacing="2" fill="#E8A65A" font-weight="500">VOOR DE LOPER DIE EROP TRAINT</text>
+
+      <text x="48" y="100" font-size="36" font-weight="700" letter-spacing="-1.2" fill="#F6F5F1">Kies een wedstrijd.</text>
+      <text x="48" y="142" font-size="36" font-weight="700" letter-spacing="-1.2" fill="#F6F5F1">Krijg een plan tot eraan toe.</text>
+
+      <text x="48" y="180" font-size="14" fill="#A8B0B8">12 tot 18 weken. Drie loopjes per week. Een coach die zich aanpast aan jouw week.</text>
+      <text x="48" y="198" font-size="14" fill="#A8B0B8">Stadsloop Mechelen heeft 96 dagen — net genoeg.</text>
+
+      <rect x="48" y="220" width="200" height="44" rx="22" fill="#F6F5F1"/>
+      <text x="148" y="248" font-size="14" font-weight="700" fill="#0D1014" text-anchor="middle">Krijg de iPhone-app</text>
+
+      <rect x="260" y="220" width="160" height="44" rx="22" fill="none" stroke="#525B65" stroke-width="1"/>
+      <text x="340" y="248" font-size="14" font-weight="500" fill="#F6F5F1" text-anchor="middle">Hoe werkt het?</text>
+
+      <!-- mini phone preview -->
+      <g transform="translate(820, 30)">
+        <rect x="0" y="0" width="220" height="220" rx="28" fill="#3A3530"/>
+        <rect x="5" y="5" width="210" height="210" rx="24" fill="#F6F5F1"/>
+
+        <clipPath id="mini-phone"><rect x="5" y="5" width="210" height="210" rx="24"/></clipPath>
+        <g clip-path="url(#mini-phone)">
+          <text x="20" y="38" font-size="13" font-weight="500" letter-spacing="-0.25" fill="#0D1014" font-family="'Tiempos Text', Georgia, serif">runtime<tspan fill="#E8A65A">.</tspan></text>
+
+          <g transform="translate(20, 56)">
+            <line x1="0" y1="8" x2="180" y2="8" stroke="#C3BCAE" stroke-width="0.5"/>
+            <line x1="0" y1="5" x2="0" y2="11" stroke="#C3BCAE"/>
+            <line x1="16" y1="5" x2="16" y2="11" stroke="#C3BCAE"/>
+            <line x1="32" y1="5" x2="32" y2="11" stroke="#C3BCAE"/>
+            <line x1="48" y1="0" x2="48" y2="16" stroke="#0D1014" stroke-width="1"/>
+            <circle cx="48" cy="8" r="3" fill="#E8A65A"/>
+            <line x1="64" y1="5" x2="64" y2="11" stroke="#C3BCAE"/>
+            <line x1="80" y1="5" x2="80" y2="11" stroke="#C3BCAE"/>
+            <line x1="96" y1="5" x2="96" y2="11" stroke="#C3BCAE"/>
+            <line x1="112" y1="5" x2="112" y2="11" stroke="#C3BCAE"/>
+            <line x1="128" y1="5" x2="128" y2="11" stroke="#C3BCAE"/>
+            <line x1="144" y1="5" x2="144" y2="11" stroke="#C3BCAE"/>
+            <line x1="160" y1="5" x2="160" y2="11" stroke="#C3BCAE"/>
+            <line x1="180" y1="-2" x2="180" y2="18" stroke="#0D1014" stroke-width="1"/>
+            <rect x="180" y="-2" width="5" height="4" fill="#0D1014"/>
+          </g>
+
+          <text x="20" y="110" font-size="30" font-weight="700" letter-spacing="-1.2" fill="#0D1014">Tempo.</text>
+          <text x="20" y="138" font-size="30" font-weight="700" letter-spacing="-1.2" fill="#8C8678">8 km.</text>
+
+          <rect x="20" y="158" width="180" height="34" rx="6" fill="#EFEDE5"/>
+          <text x="32" y="172" font-size="7" letter-spacing="1" fill="#6B7680">DOELPAS</text>
+          <text x="32" y="188" font-size="18" font-weight="500" fill="#0D1014" font-family="'JetBrains Mono', monospace" letter-spacing="-1">4:38</text>
+          <text x="84" y="188" font-size="9" fill="#6B7680" font-family="'JetBrains Mono', monospace">/km</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- SEPTEMBER -->
+    <g transform="translate(0, 946)">
+      <line x1="0" y1="50" x2="1100" y2="50" stroke="#D8D5CB" stroke-width="0.5"/>
+      <text x="48" y="36" font-size="13" letter-spacing="2.5" fill="#0D1014" font-weight="500" font-family="'JetBrains Mono', monospace">SEPTEMBER 2026</text>
+      <text x="1052" y="36" font-size="11" fill="#6B7680" text-anchor="end">14 wedstrijden</text>
+    </g>
+
+    <g transform="translate(0, 996)">
+      <line x1="0" y1="78" x2="1100" y2="78" stroke="#D8D5CB" stroke-width="0.5"/>
+      <text x="48" y="40" font-size="32" font-weight="500" letter-spacing="-1" fill="#0D1014" font-family="'JetBrains Mono', monospace">14</text>
+      <text x="84" y="40" font-size="11" letter-spacing="1" fill="#6B7680" font-family="'JetBrains Mono', monospace">SEP</text>
+      <text x="180" y="32" font-size="17" font-weight="600" fill="#0D1014">Jogging Bonheiden</text>
+      <text x="180" y="54" font-size="12" fill="#6B7680">Bonheiden · weg · vlak · KAVVV</text>
+      <text x="734" y="38" font-size="13" fill="#1B2531" font-family="'JetBrains Mono', monospace">10 km</text>
+      <text x="850" y="38" font-size="13" fill="#6B7680">Antwerpen</text>
+      <text x="1052" y="38" font-size="12" fill="#0D1014" font-weight="600" text-anchor="end">Bekijken →</text>
+    </g>
+
+    <g transform="translate(0, 1074)">
+      <line x1="0" y1="78" x2="1100" y2="78" stroke="#D8D5CB" stroke-width="0.5"/>
+      <text x="48" y="40" font-size="32" font-weight="500" letter-spacing="-1" fill="#0D1014" font-family="'JetBrains Mono', monospace">21</text>
+      <text x="84" y="40" font-size="11" letter-spacing="1" fill="#6B7680" font-family="'JetBrains Mono', monospace">SEP</text>
+      <text x="180" y="32" font-size="17" font-weight="600" fill="#0D1014">Antwerp 10 Miles · 10 km wave</text>
+      <text x="180" y="54" font-size="12" fill="#6B7680">Antwerpen · weg · stad · 38e editie · 35.000 lopers</text>
+      <text x="734" y="38" font-size="13" fill="#1B2531" font-family="'JetBrains Mono', monospace">10 km</text>
+      <text x="850" y="38" font-size="13" fill="#6B7680">Antwerpen</text>
+      <text x="1052" y="38" font-size="12" fill="#0D1014" font-weight="600" text-anchor="end">Bekijken →</text>
+    </g>
+
+    <g transform="translate(0, 1152)">
+      <line x1="0" y1="78" x2="1100" y2="78" stroke="#D8D5CB" stroke-width="0.5"/>
+      <text x="48" y="40" font-size="32" font-weight="500" letter-spacing="-1" fill="#0D1014" font-family="'JetBrains Mono', monospace">28</text>
+      <text x="84" y="40" font-size="11" letter-spacing="1" fill="#6B7680" font-family="'JetBrains Mono', monospace">SEP</text>
+      <text x="180" y="32" font-size="17" font-weight="600" fill="#0D1014">Dwars door Brugge</text>
+      <text x="180" y="54" font-size="12" fill="#6B7680">Brugge · weg · keien · Atletiekclub Brugge</text>
+      <text x="734" y="38" font-size="13" fill="#1B2531" font-family="'JetBrains Mono', monospace">10 km</text>
+      <text x="850" y="38" font-size="13" fill="#6B7680">West-Vlaanderen</text>
+      <text x="1052" y="38" font-size="12" fill="#0D1014" font-weight="600" text-anchor="end">Bekijken →</text>
+    </g>
+
+    <!-- ============ PILOT CARD ============ -->
+    <g transform="translate(0, 1230)">
+      <rect x="0" y="0" width="1100" height="230" fill="#EFEDE5"/>
+      <line x1="0" y1="0" x2="1100" y2="0" stroke="#D8D5CB" stroke-width="0.5"/>
+      <line x1="0" y1="230" x2="1100" y2="230" stroke="#D8D5CB" stroke-width="0.5"/>
+
+      <circle cx="60" cy="42" r="4" fill="#E8A65A"/>
+      <text x="74" y="46" font-size="11" letter-spacing="2" fill="#B8721A" font-weight="600">DE PILOT · 14 / 20 PLAATSEN OVER</text>
+
+      <text x="48" y="100" font-size="34" font-weight="700" letter-spacing="-1.1" fill="#0D1014">Wij coachen je gratis</text>
+      <text x="48" y="138" font-size="34" font-weight="700" letter-spacing="-1.1" fill="#0D1014">tot aan de finish.</text>
+
+      <text x="48" y="172" font-size="13" fill="#3A4A52">12 weken hands-on coaching van Luk en een sportcoach. Een echte coach. Een echt plan.</text>
+      <text x="48" y="190" font-size="13" fill="#3A4A52">In ruil: eerlijke feedback en de toestemming om te leren van hoe het bij jou loopt.</text>
+
+      <rect x="820" y="90" width="232" height="50" rx="25" fill="#0D1014"/>
+      <text x="936" y="120" font-size="14" font-weight="700" fill="#F6F5F1" text-anchor="middle">Aanmelden voor de pilot</text>
+      <text x="936" y="156" font-size="11" fill="#6B7680" text-anchor="middle">5 vragen · onder 3 minuten</text>
+      <text x="936" y="172" font-size="11" fill="#6B7680" text-anchor="middle">We laten het binnen 7 dagen weten</text>
+    </g>
+
+    <!-- continue rows: OKTOBER -->
+    <g transform="translate(0, 1460)">
+      <line x1="0" y1="50" x2="1100" y2="50" stroke="#D8D5CB" stroke-width="0.5"/>
+      <text x="48" y="36" font-size="13" letter-spacing="2.5" fill="#0D1014" font-weight="500" font-family="'JetBrains Mono', monospace">OKTOBER 2026</text>
+      <text x="1052" y="36" font-size="11" fill="#6B7680" text-anchor="end">21 wedstrijden</text>
+    </g>
+
+    <g transform="translate(0, 1510)">
+      <line x1="0" y1="78" x2="1100" y2="78" stroke="#D8D5CB" stroke-width="0.5"/>
+      <text x="48" y="40" font-size="32" font-weight="500" letter-spacing="-1" fill="#0D1014" font-family="'JetBrains Mono', monospace">04</text>
+      <text x="84" y="40" font-size="11" letter-spacing="1" fill="#6B7680" font-family="'JetBrains Mono', monospace">OKT</text>
+      <text x="180" y="32" font-size="17" font-weight="600" fill="#0D1014">Erembodegem Joggens</text>
+      <text x="180" y="54" font-size="12" fill="#6B7680">Erembodegem · weg · vlak · Atletiek Erembodegem</text>
+      <text x="734" y="38" font-size="13" fill="#1B2531" font-family="'JetBrains Mono', monospace">10 km</text>
+      <text x="850" y="38" font-size="13" fill="#6B7680">Oost-Vlaanderen</text>
+      <text x="1052" y="38" font-size="12" fill="#0D1014" font-weight="600" text-anchor="end">Bekijken →</text>
+    </g>
+
+    <g transform="translate(0, 1588)">
+      <line x1="0" y1="78" x2="1100" y2="78" stroke="#D8D5CB" stroke-width="0.5"/>
+      <text x="48" y="40" font-size="32" font-weight="500" letter-spacing="-1" fill="#0D1014" font-family="'JetBrains Mono', monospace">19</text>
+      <text x="84" y="40" font-size="11" letter-spacing="1" fill="#6B7680" font-family="'JetBrains Mono', monospace">OKT</text>
+      <text x="180" y="32" font-size="17" font-weight="600" fill="#0D1014">Marathon Gent</text>
+      <text x="180" y="54" font-size="12" fill="#6B7680">Gent · weg · vlak · 13e editie</text>
+      <text x="734" y="38" font-size="13" fill="#1B2531" font-family="'JetBrains Mono', monospace">42,2 km</text>
+      <text x="850" y="38" font-size="13" fill="#6B7680">Oost-Vlaanderen</text>
+      <text x="1052" y="38" font-size="12" fill="#0D1014" font-weight="600" text-anchor="end">Bekijken →</text>
+    </g>
+
+    <!-- continue indication -->
+    <g transform="translate(0, 1666)">
+      <line x1="0" y1="60" x2="1100" y2="60" stroke="#D8D5CB" stroke-width="0.5"/>
+      <text x="550" y="38" font-size="13" fill="#6B7680" text-anchor="middle">+ 93 wedstrijden meer in de kalender · sorteren op datum, afstand, of provincie</text>
+    </g>
+
+    <!-- WAITLIST band -->
+    <g transform="translate(0, 1726)">
+      <rect x="0" y="0" width="1100" height="220" fill="#0D1014"/>
+
+      <text x="48" y="50" font-size="11" letter-spacing="2" fill="#8C8678" font-weight="500">DE WACHTLIJST</text>
+
+      <text x="48" y="100" font-size="32" font-weight="700" letter-spacing="-1" fill="#F6F5F1">Nog niet klaar voor 12 weken?</text>
+      <text x="48" y="138" font-size="32" font-weight="700" letter-spacing="-1" fill="#F6F5F1">Schrijf je in voor de lancering.</text>
+
+      <text x="48" y="170" font-size="14" fill="#A8B0B8">Eén mail per kwartaal, hooguit. Geen launch-hype. Geen kortingen die er geen zijn.</text>
+
+      <rect x="660" y="100" width="280" height="44" rx="22" fill="none" stroke="#2A323D"/>
+      <text x="678" y="128" font-size="13" fill="#6B7680">je@email.be</text>
+
+      <rect x="948" y="100" width="104" height="44" rx="22" fill="#7B9D7A"/>
+      <text x="1000" y="128" font-size="13" font-weight="700" fill="#0D1014" text-anchor="middle">Schrijf in</text>
+      <text x="660" y="170" font-size="11" fill="#6B7680">Door je in te schrijven ga je akkoord met onze privacy-aanpak.</text>
+    </g>
+
+    <!-- LUK -->
+    <g transform="translate(0, 1946)">
+      <rect x="0" y="0" width="1100" height="180" fill="#F6F5F1"/>
+      <line x1="0" y1="180" x2="1100" y2="180" stroke="#D8D5CB" stroke-width="0.5"/>
+
+      <circle cx="98" cy="90" r="40" fill="#D8D5CB"/>
+      <text x="98" y="96" font-size="11" fill="#6B7680" text-anchor="middle">[Luk]</text>
+
+      <text x="180" y="56" font-size="11" letter-spacing="1.5" fill="#6B7680" font-weight="500">WIE BOUWT DIT</text>
+
+      <text x="180" y="92" font-size="16" fill="#1B2531">Luk Vandenbroucke. Mechelen. Loopt al twintig jaar lokale joggings.</text>
+      <text x="180" y="114" font-size="16" fill="#1B2531">Bouwt Runtime omdat er geen Vlaamse hardloopcoach-app bestaat die hem verstaat.</text>
+
+      <text x="650" y="92" font-size="13" font-style="italic" fill="#6B7680">"Een rustige coach, een echt schema, een wedstrijd op de horizon.</text>
+      <text x="650" y="112" font-size="13" font-style="italic" fill="#6B7680">Dat is wat ik zocht. Dus dat is wat ik bouw."</text>
+    </g>
+
+    <!-- FOOTER -->
+    <g transform="translate(0, 2126)">
+      <rect x="0" y="0" width="1100" height="160" fill="#F6F5F1"/>
+
+      <text x="48" y="50" font-size="22" font-weight="500" letter-spacing="-0.45" fill="#0D1014" font-family="'Tiempos Text', Georgia, serif">runtime<tspan fill="#E8A65A">.</tspan></text>
+      <text x="48" y="78" font-size="14" fill="#3A4A52" font-style="italic">Het werk is het feest.</text>
+
+      <text x="600" y="50" font-size="12" fill="#1B2531">Kalender</text>
+      <text x="680" y="50" font-size="12" fill="#1B2531">Hoe het werkt</text>
+      <text x="790" y="50" font-size="12" fill="#1B2531">Wedstrijd indienen</text>
+      <text x="920" y="50" font-size="12" fill="#1B2531">Contact</text>
+      <text x="990" y="50" font-size="12" fill="#1B2531">Privacy</text>
+
+      <line x1="48" y1="110" x2="1052" y2="110" stroke="#D8D5CB" stroke-width="0.5"/>
+      <text x="48" y="138" font-size="11" fill="#6B7680">© 2026 Runtime · Mechelen, België</text>
+      <text x="1052" y="138" font-size="11" fill="#6B7680" text-anchor="end">runtime.training · v0.2 pre-launch</text>
+    </g>
+
+  </g>
+</svg>

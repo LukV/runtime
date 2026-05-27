@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 1000" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="500" height="1000" fill="#EAE6DC"/>
+  <text x="40" y="40" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500">ONBOARDING · 8 · COMMITMENT</text>
+
+  <g transform="translate(55, 70)">
+    <rect x="0" y="0" width="390" height="844" rx="55" fill="#3A3530"/>
+    <rect x="6" y="6" width="378" height="832" rx="50" fill="#F6F5F1"/>
+
+    <clipPath id="onb-commit">
+      <rect x="6" y="6" width="378" height="832" rx="50"/>
+    </clipPath>
+
+    <g clip-path="url(#onb-commit)">
+      <text x="40" y="36" font-size="14" fill="#0D1014" font-weight="600">7:14</text>
+      <rect x="155" y="18" width="80" height="26" rx="13" fill="#0D1014"/>
+
+      <text x="30" y="110" font-size="22" font-weight="500" letter-spacing="-0.4" fill="#0D1014" font-family="'Tiempos Text', Georgia, serif">runtime<tspan fill="#E8A65A">.</tspan></text>
+
+      <text x="30" y="380" font-size="44" font-weight="700" letter-spacing="-1.8" fill="#0D1014">Je bent erbij.</text>
+      <text x="30" y="442" font-size="30" font-weight="700" letter-spacing="-1.2" fill="#8C8678">Vanaf nu ben</text>
+      <text x="30" y="478" font-size="30" font-weight="700" letter-spacing="-1.2" fill="#8C8678">je een loper.</text>
+
+      <circle cx="34" cy="605" r="4" fill="#E8A65A"/>
+      <text x="48" y="610" font-size="11" letter-spacing="1.5" fill="#6B7680">MECHELEN · 30 AUG · 96 DAGEN</text>
+
+      <rect x="30" y="720" width="330" height="56" rx="28" fill="#0D1014"/>
+      <text x="195" y="755" font-size="16" font-weight="700" fill="#F6F5F1" text-anchor="middle">Naar het plan</text>
+
+      <rect x="135" y="824" width="120" height="4" rx="2" fill="#C3BCAE"/>
+    </g>
+  </g>
+
+  <text x="40" y="945" font-size="11" fill="#6B7680">The line where the insight from 001 meets the user directly. Lands once, in one place, in one piece of copy.</text>
+</svg>

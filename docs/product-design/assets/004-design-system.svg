@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1700" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1200" height="1700" fill="#F6F5F1"/>
+
+  <text x="80" y="80" font-size="11" letter-spacing="2.5" fill="#6B7680" font-weight="500">RUNTIME · DESIGN SYSTEM · v0.3</text>
+
+  <!-- Wordmark + icon -->
+  <g transform="translate(80, 130)">
+    <text x="0" y="100" font-size="96" font-weight="500" letter-spacing="-2" fill="#0D1014" font-family="'Tiempos Text', Georgia, serif">runtime<tspan fill="#E8A65A">.</tspan></text>
+    <text x="0" y="148" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500">WORDMARK · TIEMPOS TEXT MEDIUM · -2% TRACKING</text>
+
+    <line x1="430" y1="0" x2="430" y2="180" stroke="#D8D5CB" stroke-width="0.5"/>
+
+    <g transform="translate(490, 0)">
+      <rect x="0" y="0" width="160" height="160" rx="36" fill="#0D1014"/>
+      <line x1="80" y1="50" x2="80" y2="110" stroke="#F6F5F1" stroke-width="2.5"/>
+      <circle cx="80" cy="80" r="13" fill="#E8A65A"/>
+      <text x="0" y="195" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500">APP ICON · ONE TICK FROM THE RIBBON</text>
+    </g>
+
+    <g transform="translate(770, 35)">
+      <text x="0" y="0" font-size="13" fill="#3A4A52" font-style="italic">The wordmark names the thing.</text>
+      <text x="0" y="22" font-size="13" fill="#3A4A52" font-style="italic">The icon is one marker from the ribbon —</text>
+      <text x="0" y="44" font-size="13" fill="#3A4A52" font-style="italic">the brand element, taken out of the screen,</text>
+      <text x="0" y="66" font-size="13" fill="#3A4A52" font-style="italic">and put on the home screen.</text>
+      <text x="0" y="105" font-size="12" fill="#6B7680">The amber dot does one job, in three places:</text>
+      <text x="0" y="125" font-size="12" fill="#6B7680">the wordmark period, the ribbon, the app icon.</text>
+    </g>
+  </g>
+
+  <text x="80" y="350" font-size="17" fill="#525B65" font-style="italic">Een rustige hardloopcoach voor wie graag vroeg op is.  ·  runtime.training</text>
+
+  <line x1="80" y1="395" x2="1120" y2="395" stroke="#D8D5CB" stroke-width="0.5"/>
+
+  <!-- App icon at every size -->
+  <text x="80" y="440" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500">APP ICON · HOLDS AT EVERY SIZE</text>
+
+  <g transform="translate(80, 470)">
+    <rect x="0" y="0" width="180" height="180" rx="40" fill="#0D1014"/>
+    <line x1="90" y1="55" x2="90" y2="125" stroke="#F6F5F1" stroke-width="3"/>
+    <circle cx="90" cy="90" r="15" fill="#E8A65A"/>
+    <text x="0" y="210" font-size="10" letter-spacing="1" fill="#6B7680">180×180 · STORE</text>
+
+    <g transform="translate(220, 0)">
+      <rect x="0" y="0" width="120" height="120" rx="27" fill="#0D1014"/>
+      <line x1="60" y1="37" x2="60" y2="83" stroke="#F6F5F1" stroke-width="2"/>
+      <circle cx="60" cy="60" r="10" fill="#E8A65A"/>
+      <text x="0" y="210" font-size="10" letter-spacing="1" fill="#6B7680">120×120 · HOME RETINA</text>
+    </g>
+
+    <g transform="translate(380, 0)">
+      <rect x="0" y="0" width="60" height="60" rx="14" fill="#0D1014"/>
+      <line x1="30" y1="19" x2="30" y2="41" stroke="#F6F5F1" stroke-width="1.5"/>
+      <circle cx="30" cy="30" r="5" fill="#E8A65A"/>
+      <text x="0" y="210" font-size="10" letter-spacing="1" fill="#6B7680">60×60 · HOME CSS</text>
+    </g>
+
+    <g transform="translate(480, 0)">
+      <rect x="0" y="0" width="40" height="40" rx="9" fill="#0D1014"/>
+      <line x1="20" y1="13" x2="20" y2="27" stroke="#F6F5F1" stroke-width="1"/>
+      <circle cx="20" cy="20" r="3.5" fill="#E8A65A"/>
+      <text x="-10" y="210" font-size="10" letter-spacing="1" fill="#6B7680">40×40 · SETTINGS</text>
+    </g>
+
+    <g transform="translate(560, 0)">
+      <rect x="0" y="0" width="29" height="29" rx="7" fill="#0D1014"/>
+      <line x1="14.5" y1="9" x2="14.5" y2="20" stroke="#F6F5F1" stroke-width="1"/>
+      <circle cx="14.5" cy="14.5" r="2.5" fill="#E8A65A"/>
+      <text x="-20" y="210" font-size="10" letter-spacing="1" fill="#6B7680">29×29 · SPOTLIGHT</text>
+    </g>
+
+    <g transform="translate(720, 0)">
+      <rect x="0" y="0" width="320" height="180" rx="20" fill="#2A2A2A"/>
+      <rect x="20" y="40" width="100" height="100" rx="22" fill="#0D1014"/>
+      <line x1="70" y1="72" x2="70" y2="108" stroke="#F6F5F1" stroke-width="2"/>
+      <circle cx="70" cy="90" r="8" fill="#E8A65A"/>
+      <text x="70" y="165" font-size="12" fill="#F6F5F1" text-anchor="middle">Runtime</text>
+
+      <rect x="140" y="40" width="100" height="100" rx="22" fill="#FC4C02"/>
+      <text x="190" y="165" font-size="12" fill="#F6F5F1" text-anchor="middle">Strava</text>
+
+      <rect x="260" y="40" width="100" height="100" rx="22" fill="#000000"/>
+      <text x="285" y="95" font-size="36" font-weight="700" fill="#F6F5F1">N</text>
+      <text x="310" y="165" font-size="12" fill="#F6F5F1" text-anchor="middle">Nike</text>
+
+      <text x="0" y="210" font-size="10" letter-spacing="1" fill="#6B7680">IN CONTEXT · NEXT TO ITS NEIGHBOURS</text>
+    </g>
+  </g>
+
+  <line x1="80" y1="730" x2="1120" y2="730" stroke="#D8D5CB" stroke-width="0.5"/>
+
+  <text x="80" y="775" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500">THE HOOK · RACE RIBBON · SQUARE FLAG MARKS THE GOAL</text>
+
+  <g transform="translate(80, 820)">
+    <line x1="0" y1="20" x2="1010" y2="20" stroke="#0D1014" stroke-width="0.75"/>
+    <line x1="0" y1="13" x2="0" y2="27" stroke="#0D1014" stroke-width="1"/>
+    <line x1="92" y1="13" x2="92" y2="27" stroke="#0D1014" stroke-width="1"/>
+    <line x1="184" y1="13" x2="184" y2="27" stroke="#0D1014" stroke-width="1"/>
+    <line x1="276" y1="6" x2="276" y2="34" stroke="#0D1014" stroke-width="1.5"/>
+    <circle cx="276" cy="20" r="6" fill="#E8A65A"/>
+    <line x1="368" y1="13" x2="368" y2="27" stroke="#0D1014" stroke-width="1"/>
+    <line x1="460" y1="13" x2="460" y2="27" stroke="#0D1014" stroke-width="1"/>
+    <line x1="552" y1="13" x2="552" y2="27" stroke="#0D1014" stroke-width="1"/>
+    <line x1="644" y1="13" x2="644" y2="27" stroke="#0D1014" stroke-width="1"/>
+    <line x1="736" y1="13" x2="736" y2="27" stroke="#0D1014" stroke-width="1"/>
+    <line x1="828" y1="13" x2="828" y2="27" stroke="#0D1014" stroke-width="1"/>
+    <line x1="920" y1="13" x2="920" y2="27" stroke="#0D1014" stroke-width="1"/>
+    <line x1="1010" y1="0" x2="1010" y2="40" stroke="#0D1014" stroke-width="2"/>
+    <rect x="1010" y="0" width="14" height="10" fill="#0D1014"/>
+    <text x="0" y="60" font-size="10" letter-spacing="1" fill="#6B7680">WEEK 1</text>
+    <text x="261" y="60" font-size="10" letter-spacing="1" fill="#0D1014" font-weight="600">VANDAAG · WEEK 4</text>
+    <text x="970" y="60" font-size="10" letter-spacing="1" fill="#6B7680">GOAL</text>
+  </g>
+
+  <text x="80" y="930" font-size="13" fill="#525B65" font-style="italic">The amber dot does one job, in three places: the wordmark period, the ribbon, and the app icon.</text>
+
+  <line x1="80" y1="965" x2="1120" y2="965" stroke="#D8D5CB" stroke-width="0.5"/>
+
+  <text x="80" y="1010" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500">TYPE · TIEMPOS FOR THE MARK · ABC DIATYPE FOR THE UI · JETBRAINS MONO FOR NUMBERS</text>
+
+  <text x="80" y="1080" font-size="42" font-weight="500" letter-spacing="-1" fill="#0D1014" font-family="'Tiempos Text', Georgia, serif">runtime<tspan fill="#E8A65A">.</tspan></text>
+  <text x="80" y="1108" font-size="11" letter-spacing="1" fill="#6B7680">WORDMARK · TIEMPOS TEXT 500 · ONLY USE OF SERIF IN THE BRAND</text>
+
+  <text x="80" y="1180" font-size="72" font-weight="700" letter-spacing="-3" fill="#0D1014">Tempo. <tspan fill="#8C8678">8 km.</tspan></text>
+  <text x="80" y="1208" font-size="11" letter-spacing="1" fill="#6B7680">DISPLAY · ABC DIATYPE BOLD · TWO-TONE: NOUN INKT, UNIT STEEN</text>
+
+  <text x="80" y="1262" font-size="20" fill="#1B2531" font-weight="400">Houd het comfortabel zwaar.</text>
+  <text x="80" y="1286" font-size="11" letter-spacing="1" fill="#6B7680">BODY · ABC DIATYPE REGULAR · COACH'S VOICE</text>
+
+  <text x="80" y="1350" font-size="64" font-weight="500" fill="#0D1014" font-family="'JetBrains Mono', monospace" letter-spacing="-2">4:38</text>
+  <text x="245" y="1350" font-size="20" fill="#6B7680" font-family="'JetBrains Mono', monospace" letter-spacing="-1">/km</text>
+  <text x="80" y="1378" font-size="11" letter-spacing="1" fill="#6B7680">NUMERICS · JETBRAINS MONO MEDIUM · SWISS CLOCK-FACE CARE</text>
+
+  <line x1="80" y1="1425" x2="1120" y2="1425" stroke="#D8D5CB" stroke-width="0.5"/>
+
+  <text x="80" y="1470" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500">COLOR · NAMED IN DUTCH</text>
+
+  <g transform="translate(80, 1500)">
+    <rect x="0" y="0" width="140" height="130" fill="#7B9D7A" rx="2"/>
+    <text x="0" y="156" font-size="13" fill="#0D1014" font-weight="600">Veldgroen</text>
+    <text x="0" y="174" font-size="10" fill="#6B7680" font-family="'JetBrains Mono', monospace">#7B9D7A</text>
+
+    <rect x="160" y="0" width="140" height="130" fill="#E8A65A" rx="2"/>
+    <text x="160" y="156" font-size="13" fill="#0D1014" font-weight="600">Eerste licht</text>
+    <text x="160" y="174" font-size="10" fill="#6B7680" font-family="'JetBrains Mono', monospace">#E8A65A</text>
+
+    <rect x="320" y="0" width="140" height="130" fill="#0D1014" rx="2"/>
+    <text x="320" y="156" font-size="13" fill="#0D1014" font-weight="600">Inkt</text>
+    <text x="320" y="174" font-size="10" fill="#6B7680" font-family="'JetBrains Mono', monospace">#0D1014</text>
+
+    <rect x="480" y="0" width="140" height="130" fill="#F6F5F1" rx="2" stroke="#D8D5CB" stroke-width="0.5"/>
+    <text x="480" y="156" font-size="13" fill="#0D1014" font-weight="600">Krijt</text>
+    <text x="480" y="174" font-size="10" fill="#6B7680" font-family="'JetBrains Mono', monospace">#F6F5F1</text>
+
+    <rect x="640" y="0" width="140" height="130" fill="#6B7680" rx="2"/>
+    <text x="640" y="156" font-size="13" fill="#0D1014" font-weight="600">Mist</text>
+    <text x="640" y="174" font-size="10" fill="#6B7680" font-family="'JetBrains Mono', monospace">#6B7680</text>
+
+    <rect x="800" y="0" width="140" height="130" fill="#EFEDE5" rx="2" stroke="#D8D5CB" stroke-width="0.5"/>
+    <text x="800" y="156" font-size="13" fill="#0D1014" font-weight="600">Stof</text>
+    <text x="800" y="174" font-size="10" fill="#6B7680" font-family="'JetBrains Mono', monospace">#EFEDE5</text>
+  </g>
+</svg>

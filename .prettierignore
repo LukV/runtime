@@ -1,0 +1,17 @@
+# Prose lives outside Prettier's reach — paragraph wrapping is intentional.
+docs/
+CHANGELOG.md
+README.md
+
+# Generated files: their format is the generator's responsibility.
+packages/design-tokens/dist/
+
+# Tool output
+node_modules/
+.next/
+out/
+build/
+coverage/
+
+# Lockfiles
+package-lock.json

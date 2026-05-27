@@ -1,0 +1,24 @@
+/* AUTO-GENERATED FROM tokens.json — DO NOT EDIT */
+
+:root {
+  --color-veldgroen: #7B9D7A;
+  --color-eerste-licht: #E8A65A;
+  --color-inkt: #0D1014;
+  --color-krijt: #F6F5F1;
+  --color-mist: #6B7680;
+  --color-stof: #EFEDE5;
+  --color-nacht: #1B2531;
+  --color-steen: #8C8678;
+  --color-houtskool: #3A4A52;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 22px;
+  --space-6: 30px;
+  --space-7: 36px;
+  --space-8: 44px;
+
+  --motion-transition: 220ms ease-out;
+}

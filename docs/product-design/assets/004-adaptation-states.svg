@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1000" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="1500" height="1000" fill="#EAE6DC"/>
+  <text x="40" y="40" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500">ADAPTATION · AHEAD · INJURED · HEAT</text>
+
+  <g transform="translate(55, 70)">
+    <rect x="0" y="0" width="390" height="844" rx="55" fill="#3A3530"/>
+    <rect x="6" y="6" width="378" height="832" rx="50" fill="#F6F5F1"/>
+    <clipPath id="ad-a"><rect x="6" y="6" width="378" height="832" rx="50"/></clipPath>
+    <g clip-path="url(#ad-a)">
+      <text x="40" y="36" font-size="14" fill="#0D1014" font-weight="600">7:14</text>
+      <rect x="155" y="18" width="80" height="26" rx="13" fill="#0D1014"/>
+
+      <text x="30" y="98" font-size="22" font-weight="500" letter-spacing="-0.4" fill="#0D1014" font-family="'Tiempos Text', Georgia, serif">runtime<tspan fill="#E8A65A">.</tspan></text>
+      <text x="346" y="98" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500" text-anchor="end">MA 26 MEI</text>
+
+      <rect x="30" y="160" width="330" height="320" rx="16" fill="#0D1014"/>
+      <circle cx="50" cy="190" r="4" fill="#7B9D7A"/>
+      <text x="64" y="194" font-size="11" letter-spacing="1.5" fill="#7B9D7A" font-weight="500">PLAN AANGEPAST</text>
+
+      <text x="50" y="240" font-size="28" font-weight="700" letter-spacing="-1" fill="#F6F5F1">Je loopt sterker</text>
+      <text x="50" y="272" font-size="28" font-weight="700" letter-spacing="-1" fill="#F6F5F1">dan verwacht.</text>
+      <text x="50" y="302" font-size="13" fill="#A8B0B8">Drie zware weken op rij gehaald.</text>
+      <text x="50" y="320" font-size="13" fill="#A8B0B8">An scherpt de doelpas met 8 seconden.</text>
+
+      <line x1="50" y1="360" x2="340" y2="360" stroke="#2A323D" stroke-width="0.5"/>
+
+      <text x="50" y="390" font-size="10" letter-spacing="1.5" fill="#6B7680">DOELPAS</text>
+      <text x="50" y="430" font-size="13" fill="#6B7680" font-family="'JetBrains Mono', monospace" text-decoration="line-through">4:46</text>
+      <text x="92" y="430" font-size="22" font-weight="500" fill="#F6F5F1" font-family="'JetBrains Mono', monospace" letter-spacing="-1">4:38</text>
+      <text x="170" y="430" font-size="11" fill="#6B7680" font-family="'JetBrains Mono', monospace">/km</text>
+
+      <text x="210" y="390" font-size="10" letter-spacing="1.5" fill="#6B7680">WEEKVOLUME</text>
+      <text x="210" y="430" font-size="13" fill="#6B7680" font-family="'JetBrains Mono', monospace" text-decoration="line-through">32</text>
+      <text x="246" y="430" font-size="22" font-weight="500" fill="#F6F5F1" font-family="'JetBrains Mono', monospace" letter-spacing="-1">35</text>
+      <text x="294" y="430" font-size="11" fill="#6B7680" font-family="'JetBrains Mono', monospace">km</text>
+
+      <text x="30" y="520" font-size="13" fill="#525B65">Het ritme blijft. Het tempo wordt eerlijker.</text>
+
+      <rect x="30" y="720" width="330" height="56" rx="28" fill="#0D1014"/>
+      <text x="195" y="755" font-size="16" font-weight="700" fill="#F6F5F1" text-anchor="middle">Akkoord</text>
+      <text x="195" y="798" font-size="12" fill="#6B7680" text-anchor="middle">Aanpassing terugdraaien</text>
+
+      <rect x="135" y="824" width="120" height="4" rx="2" fill="#C3BCAE"/>
+    </g>
+  </g>
+
+  <g transform="translate(555, 70)">
+    <rect x="0" y="0" width="390" height="844" rx="55" fill="#3A3530"/>
+    <rect x="6" y="6" width="378" height="832" rx="50" fill="#F6F5F1"/>
+    <clipPath id="ad-b"><rect x="6" y="6" width="378" height="832" rx="50"/></clipPath>
+    <g clip-path="url(#ad-b)">
+      <text x="40" y="36" font-size="14" fill="#0D1014" font-weight="600">7:14</text>
+      <rect x="155" y="18" width="80" height="26" rx="13" fill="#0D1014"/>
+
+      <text x="30" y="98" font-size="22" font-weight="500" letter-spacing="-0.4" fill="#0D1014" font-family="'Tiempos Text', Georgia, serif">runtime<tspan fill="#E8A65A">.</tspan></text>
+      <text x="346" y="98" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500" text-anchor="end">DO 29 MEI</text>
+
+      <rect x="30" y="160" width="330" height="320" rx="16" fill="#0D1014"/>
+      <circle cx="50" cy="190" r="4" fill="#E8A65A"/>
+      <text x="64" y="194" font-size="11" letter-spacing="1.5" fill="#E8A65A" font-weight="500">RUSTWEEK</text>
+
+      <text x="50" y="240" font-size="28" font-weight="700" letter-spacing="-1" fill="#F6F5F1">Een week op</text>
+      <text x="50" y="272" font-size="28" font-weight="700" letter-spacing="-1" fill="#F6F5F1">halve kracht.</text>
+      <text x="50" y="302" font-size="13" fill="#A8B0B8">Drie dagen ziek. Niets is verloren.</text>
+      <text x="50" y="320" font-size="13" fill="#A8B0B8">We pakken het rustig weer op.</text>
+
+      <line x1="50" y1="360" x2="340" y2="360" stroke="#2A323D" stroke-width="0.5"/>
+
+      <text x="50" y="390" font-size="10" letter-spacing="1.5" fill="#6B7680">DEZE WEEK · WAS / WORDT</text>
+      <text x="50" y="416" font-size="12" fill="#6B7680" text-decoration="line-through">di · tempo 8 km</text>
+      <text x="180" y="416" font-size="12" fill="#F6F5F1">→ di · rust</text>
+      <text x="50" y="438" font-size="12" fill="#6B7680" text-decoration="line-through">do · duurloop 8 km</text>
+      <text x="180" y="438" font-size="12" fill="#F6F5F1">→ do · 4 km los</text>
+      <text x="50" y="460" font-size="12" fill="#6B7680" text-decoration="line-through">za · lange 14 km</text>
+      <text x="180" y="460" font-size="12" fill="#F6F5F1">→ za · 8 km los</text>
+
+      <text x="30" y="520" font-size="13" fill="#525B65">Mechelen blijft staan. De ribbon schuift niet.</text>
+
+      <rect x="30" y="720" width="330" height="56" rx="28" fill="#0D1014"/>
+      <text x="195" y="755" font-size="16" font-weight="700" fill="#F6F5F1" text-anchor="middle">Begrepen</text>
+      <text x="195" y="798" font-size="12" fill="#6B7680" text-anchor="middle">Toch het oorspronkelijke plan</text>
+
+      <rect x="135" y="824" width="120" height="4" rx="2" fill="#C3BCAE"/>
+    </g>
+  </g>
+
+  <g transform="translate(1055, 70)">
+    <rect x="0" y="0" width="390" height="844" rx="55" fill="#3A3530"/>
+    <rect x="6" y="6" width="378" height="832" rx="50" fill="#F6F5F1"/>
+    <clipPath id="ad-c"><rect x="6" y="6" width="378" height="832" rx="50"/></clipPath>
+    <g clip-path="url(#ad-c)">
+      <text x="40" y="36" font-size="14" fill="#0D1014" font-weight="600">7:14</text>
+      <rect x="155" y="18" width="80" height="26" rx="13" fill="#0D1014"/>
+
+      <text x="30" y="98" font-size="22" font-weight="500" letter-spacing="-0.4" fill="#0D1014" font-family="'Tiempos Text', Georgia, serif">runtime<tspan fill="#E8A65A">.</tspan></text>
+      <text x="346" y="98" font-size="11" letter-spacing="2" fill="#6B7680" font-weight="500" text-anchor="end">WO 9 JUL</text>
+
+      <rect x="30" y="160" width="330" height="320" rx="16" fill="#0D1014"/>
+      <circle cx="50" cy="190" r="4" fill="#E8A65A"/>
+      <text x="64" y="194" font-size="11" letter-spacing="1.5" fill="#E8A65A" font-weight="500">HITTE · 32 °C</text>
+
+      <text x="50" y="240" font-size="28" font-weight="700" letter-spacing="-1" fill="#F6F5F1">Vandaag geen</text>
+      <text x="50" y="272" font-size="28" font-weight="700" letter-spacing="-1" fill="#F6F5F1">tempo.</text>
+      <text x="50" y="302" font-size="13" fill="#A8B0B8">32 graden in Antwerpen.</text>
+      <text x="50" y="320" font-size="13" fill="#A8B0B8">De tempo's komen morgen vroeg.</text>
+
+      <line x1="50" y1="360" x2="340" y2="360" stroke="#2A323D" stroke-width="0.5"/>
+
+      <text x="50" y="390" font-size="10" letter-spacing="1.5" fill="#6B7680">VANDAAG</text>
+      <text x="50" y="416" font-size="15" fill="#F6F5F1">Duurloop 6 km</text>
+      <text x="50" y="438" font-size="12" fill="#6B7680" font-family="'JetBrains Mono', monospace">5:20–5:40 /km</text>
+
+      <text x="200" y="390" font-size="10" letter-spacing="1.5" fill="#6B7680">MORGEN VROEG</text>
+      <text x="200" y="416" font-size="15" fill="#F6F5F1">Tempo 8 km</text>
+      <text x="200" y="438" font-size="12" fill="#6B7680" font-family="'JetBrains Mono', monospace">4:38 /km · 6u start</text>
+
+      <text x="30" y="520" font-size="13" fill="#525B65">Met de hitte mee, niet ertegen.</text>
+
+      <rect x="30" y="720" width="330" height="56" rx="28" fill="#0D1014"/>
+      <text x="195" y="755" font-size="16" font-weight="700" fill="#F6F5F1" text-anchor="middle">Akkoord</text>
+      <text x="195" y="798" font-size="12" fill="#6B7680" text-anchor="middle">Toch vandaag tempo lopen</text>
+
+      <rect x="135" y="824" width="120" height="4" rx="2" fill="#C3BCAE"/>
+    </g>
+  </g>
+</svg>

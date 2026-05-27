@@ -1,0 +1,21 @@
+@import '@runtime/design-tokens/tokens.css';
+@import 'tailwindcss';
+
+/* The Tailwind 4 @theme bridge to our tokens is deferred until utility classes
+   for brand colors are actually needed. For now consumers reach for the CSS
+   custom properties directly (`var(--color-inkt)`) or via Tailwind arbitrary
+   values (`bg-[var(--color-krijt)]`). See
+   packages/design-tokens/README.md for the naming. */
+
+body {
+  background: var(--color-krijt);
+  color: var(--color-houtskool);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

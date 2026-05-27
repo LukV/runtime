@@ -1,0 +1,19 @@
+{
+  "name": "@runtime/design-tokens",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./tokens.css": "./dist/tokens.css",
+    "./tokens.ts": "./dist/tokens.ts",
+    "./tokens.json": "./tokens.json",
+    "./Tokens.swift": "./dist/Tokens.swift"
+  },
+  "files": [
+    "tokens.json",
+    "dist"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate.mjs"
+  }
+}

@@ -1,0 +1,3 @@
+-- Seed data for local Supabase. Empty for now — the database has no schema yet.
+-- The first migration to create tables lands with Block 4 (pilot intake) or
+-- whichever block first needs persistence.
