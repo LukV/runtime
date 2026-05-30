@@ -1,0 +1,54 @@
+{
+  "source": "icons/app-icon.svg",
+  "icons": [
+    {
+      "filename": "app-icon-1024.png",
+      "size": 1024,
+      "idiom": "ios-marketing",
+      "scale": 1,
+      "role": "app-store"
+    },
+    {
+      "filename": "app-icon-180.png",
+      "size": 180,
+      "idiom": "iphone",
+      "scale": 3,
+      "role": "app"
+    },
+    {
+      "filename": "app-icon-120.png",
+      "size": 120,
+      "idiom": "iphone",
+      "scale": 2,
+      "role": "app"
+    },
+    {
+      "filename": "app-icon-80.png",
+      "size": 80,
+      "idiom": "iphone",
+      "scale": 2,
+      "role": "spotlight"
+    },
+    {
+      "filename": "app-icon-60.png",
+      "size": 60,
+      "idiom": "iphone",
+      "scale": 3,
+      "role": "settings"
+    },
+    {
+      "filename": "app-icon-40.png",
+      "size": 40,
+      "idiom": "iphone",
+      "scale": 2,
+      "role": "spotlight"
+    },
+    {
+      "filename": "app-icon-29.png",
+      "size": 29,
+      "idiom": "iphone",
+      "scale": 2,
+      "role": "settings"
+    }
+  ]
+}

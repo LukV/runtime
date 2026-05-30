@@ -34,6 +34,9 @@ Both produce byte-identical output. The script has no external dependencies.
 - `dist/Tokens.swift` — `Color` extensions, `Spacing` enum, `Motion` enum for SwiftUI. The iOS app reads this file via an Xcode build-phase script (wired in Block 5).
 - `dist/wordmark.svg` — the runtime wordmark outlined from Source Serif 4 Medium with the amber period as a separate `<circle>`. Hand-readable SVG, useful for design-tool inspection.
 - `dist/wordmark.ts` — the same wordmark as TypeScript: `WORDMARK_PATH`, `WORDMARK_PERIOD`, `WORDMARK_VIEWBOX`. Consumed by `apps/web/app/_components/Wordmark.tsx` and (eventually) the SwiftUI Wordmark in Block 5.
+- `dist/ribbon.ts` — geometry constants (`RIBBON_VIEWBOX`, `RIBBON_GEOMETRY`) and a `ribbonTicks()` helper for the race ribbon. Consumed by `apps/web/app/_components/Ribbon.tsx`; the future SwiftUI Ribbon reads the same source.
+- `dist/icons/app-icon-{29,40,60,80,120,180,1024}.png` + `MANIFEST.json` — Apple-required app-icon sizes rasterized from `icons/app-icon.svg`. Block 5 consumes the manifest to wire `Assets.xcassets`.
+- `dist/icons/_verify.png` — every non-1024 PNG scaled 4× and laid out side-by-side. Visual proof the amber dot is sharp at 29×29.
 
 Type tokens are deliberately **not** in `tokens.css` — they're too compound for CSS variables. Consumers reach for `tokens.ts`.
 
@@ -62,6 +65,34 @@ rm /tmp/SourceSerif4Variable-Roman.ttf /tmp/SourceSerif4-Medium-instance.ttf
 ```
 
 The script lives at `scripts/generate-wordmark.mjs` and uses `opentype.js` (the only devDep). Source Serif 4 Medium static OTF is not directly available in the canonical repo — only the variable font — so the fontTools instancing step is required.
+
+## Regenerating the app icons
+
+The master icon SVG is at `icons/app-icon.svg` (1024×1024 native, three parametric elements per 004 §1 — ink ground, vandaag tick, amber dot). To regenerate the PNG export for every Apple-required size:
+
+```sh
+npm run generate:icons -w packages/design-tokens
+```
+
+Outputs go to `dist/icons/` along with `MANIFEST.json` listing each size's intended catalog binding. The script depends on `sharp` (declared as a devDep).
+
+After regenerating, build the verification sheet:
+
+```sh
+npm run verify:icons -w packages/design-tokens
+```
+
+Open `dist/icons/_verify.png` in Preview. Confirm the amber dot is sharp at every size — particularly at 29×29 where the dot is ~4 pixels and any subpixel smear is visible. If the dot looks wrong at 29×29, nudge `r=80` to `r=78` or `r=82` in `icons/app-icon.svg` and re-export.
+
+### Block 5 handoff
+
+When `apps/ios/` exists, block 5's first pitch consumes this pipeline:
+
+1. Generate or hand-write `apps/ios/Runtime/Assets.xcassets/AppIcon.appiconset/Contents.json` from `dist/icons/MANIFEST.json` — the manifest carries `idiom`, `scale`, `role`, and `filename` for every entry.
+2. Copy `dist/icons/app-icon-*.png` into the appiconset folder.
+3. Reference `AppIcon` from the iOS target's primary app-icon setting.
+
+Don't hand-edit the PNGs in `Assets.xcassets`. If a re-export is needed, change `icons/app-icon.svg`, run `generate:icons`, copy the new PNGs in. The master SVG is the source.
 
 ## Naming
 

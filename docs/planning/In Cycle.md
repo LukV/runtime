@@ -16,15 +16,13 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 *Nothing in cycle yet.*
 
+**Block 1 (Brand System in Code) is fully shipped on 2026-05-30.** All 5 slots landed across two release boundaries — tokens, fonts, and wordmark on 2026-05-27 (v0.1.0); the race ribbon and the app icon on 2026-05-30. Block 2 (Website Foundation) is next.
+
 See the on-deck list below for the next pickup.
 
 ## On deck
 
-Block 1's last slot, then block 2's queue. Order:
-
-### Block 1 — finishing the brand system in code
-
-1. **App icon assets at every size** — *an evening* — [[pitches/app-icon-assets-at-every-size]]. Master SVG + export pipeline emitting PNGs at every Apple-required size to `packages/design-tokens/dist/icons/` with a manifest. `Assets.xcassets` catalog wiring happens at the start of block 5 as a five-minute follow-up; this pitch ships everything *but* the wiring because `apps/ios/` doesn't exist yet.
+Block 2's queue. Order:
 
 ### Block 2 — website foundation
 

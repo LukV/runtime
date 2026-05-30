@@ -2,7 +2,7 @@
 project: runtime
 type: planning-block
 block: brand-system-in-code
-status: in-progress
+status: shipped
 updated: 2026-05-30
 ---
 # Block 1 — Brand System in Code
@@ -11,7 +11,7 @@ The design system from [[../../product-design/004-design-system-and-screens]] tr
 
 This block is small but **foundational** — it's the only one that has to ship before others can begin. Getting it right means the calendar, intake, and app all look like the same product without having to reinvent variables three times.
 
-**Status: 4 of 5 slots shipped.** Tokens, fonts, and the wordmark landed on 2026-05-27; the race ribbon landed on 2026-05-30. The app icon is the last open slot — pitched and on deck. See [[../In Cycle]] and the slots below.
+**Status: shipped 2026-05-30.** All 5 slots landed. Tokens, fonts, and the wordmark on 2026-05-27 (released as v0.1.0); the race ribbon and the app icon on 2026-05-30. Block 2 is next.
 
 Design: [[../../product-design/004-design-system-and-screens]].
 
@@ -47,7 +47,7 @@ The brand's structural hook ([[../../product-design/004-design-system-and-screen
 
 *Web-first, iOS deferred.* Following the precedent set by [[../pitches/shipped/wordmark-as-component]] and [[../pitches/shipped/font-integration]], the pitch ships the web component this evening and leaves a clean handoff (geometry constants in `dist/ribbon.ts`) for block 5 to pick up the iOS port.
 
-### App icon assets at every size — *an evening* — [[../pitches/app-icon-assets-at-every-size|pitch ready]]
+### App icon assets at every size — *an evening* — [[../pitches/shipped/app-icon-assets-at-every-size|shipped 2026-05-30]]
 
 Export the icon from the design SVG at every Apple-required size (180, 120, 80, 60, 40, 29, plus 1024 for the App Store). Same icon, just rasterized cleanly. Make sure the amber dot lands on a pixel boundary at every size.
 
@@ -63,4 +63,4 @@ Everything else depends on this:
 - [[02-website-foundation]] needs tokens + wordmark ✓ (ribbon optional for block 2)
 - [[03-race-calendar]] needs tokens + wordmark ✓
 - [[04-pilot-intake]] needs tokens + wordmark ✓
-- [[05-ios-app-downsized]] needs tokens + wordmark ✓ + ribbon ✓ + app icon (pitch ready)
+- [[05-ios-app-downsized]] needs tokens + wordmark ✓ + ribbon ✓ + app icon ✓

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Runtime app icon — authored at 1024×1024 native.
+     Per 004 §1 "App icon": ink ground (Inkt), vertical white stroke
+     (the vandaag tick, Krijt), amber dot (Eerste licht) at the center.
+     Geometry is parametric — the three values (tick width=40, tick
+     height=384, dot radius=80) are tuned so integer-pixel rounding
+     at every Apple-required output size lands on a pixel boundary.
+     Background extends to viewBox edges; iOS rounds the corners. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#0D1014"/>
+  <rect x="492" y="320" width="40" height="384" fill="#F6F5F1"/>
+  <circle cx="512" cy="512" r="80" fill="#E8A65A"/>
+</svg>
