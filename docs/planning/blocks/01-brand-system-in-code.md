@@ -3,7 +3,7 @@ project: runtime
 type: planning-block
 block: brand-system-in-code
 status: in-progress
-updated: 2026-05-27
+updated: 2026-05-30
 ---
 # Block 1 — Brand System in Code
 
@@ -11,7 +11,7 @@ The design system from [[../../product-design/004-design-system-and-screens]] tr
 
 This block is small but **foundational** — it's the only one that has to ship before others can begin. Getting it right means the calendar, intake, and app all look like the same product without having to reinvent variables three times.
 
-**Status: 3 of 5 slots shipped on 2026-05-27.** Tokens, fonts, and the wordmark component all landed. The race ribbon and the app icon are still open — see notes against the slots below for when they're expected to ship.
+**Status: 4 of 5 slots shipped.** Tokens, fonts, and the wordmark landed on 2026-05-27; the race ribbon landed on 2026-05-30. The app icon is the last open slot — pitched and on deck. See [[../In Cycle]] and the slots below.
 
 Design: [[../../product-design/004-design-system-and-screens]].
 
@@ -39,21 +39,21 @@ Add **Source Serif 4**, **Inter**, and **JetBrains Mono** to the project. Web: G
 
 If [the wordmark-as-SVG question](#font-integration--an-evening) lands as *yes, inline SVG*, this becomes a single `<svg>` component instead of a styled text element. Either way, same API.
 
-### The race ribbon component — *an evening* — **open**
+### The race ribbon component — *an evening* — [[../pitches/shipped/race-ribbon-component|shipped 2026-05-30]]
 
 The brand's structural hook ([[../../product-design/004-design-system-and-screens#The hook — race ribbon]]). Single component in both web and iOS: takes `currentWeek`, `totalWeeks`, and `caption` props. Renders the ribbon at any tick count from 6 to 18 (or beyond, but those are the pilot range). Square flag at the right, amber dot at current week, ink pole for both.
 
 *Why a component.* Used on Vandaag, onboarding plan preview, partner admin, website nav-adjacent area (small mode), and the wedstrijd sheet header. Six places. If each instance is hand-coded the brand drifts inside a week.
 
-*When it ships.* Block 2 ([[02-website-foundation]]) doesn't strictly need the ribbon — the website only uses it in a "nav-adjacent small mode" that block 2 can stub or skip. The hard dependency is block 5 (the iOS app). So this slot lives in block 1's queue and can land any time before block 5 starts. Probably easiest to ship it during block 2 when web component patterns are warm.
+*Web-first, iOS deferred.* Following the precedent set by [[../pitches/shipped/wordmark-as-component]] and [[../pitches/shipped/font-integration]], the pitch ships the web component this evening and leaves a clean handoff (geometry constants in `dist/ribbon.ts`) for block 5 to pick up the iOS port.
 
-### App icon assets at every size — *an evening* — **open**
+### App icon assets at every size — *an evening* — [[../pitches/app-icon-assets-at-every-size|pitch ready]]
 
-Export the icon from the design SVG at every Apple-required size (180, 120, 80, 60, 40, 29, plus 1024 for the App Store). Same icon, just rasterized cleanly. Place in `Assets.xcassets`. Make sure the amber dot lands on a pixel boundary at every size.
+Export the icon from the design SVG at every Apple-required size (180, 120, 80, 60, 40, 29, plus 1024 for the App Store). Same icon, just rasterized cleanly. Make sure the amber dot lands on a pixel boundary at every size.
 
 *Risk.* Rasterizing SVG to PNG at small sizes (29×29) loses the dot if subpixel rendering is bad. Inspect each export manually.
 
-*When it ships.* iOS-only. No web consumer. Naturally defers to the start of block 5 ([[05-ios-app-downsized]]) — there's nothing to put the assets *into* until the Xcode project exists.
+*Pipeline now, catalog wiring at block 5.* The pitch ships the master SVG, the export pipeline (`packages/design-tokens/scripts/generate-icons.mjs` → `dist/icons/`), and a manifest describing each PNG's intended catalog binding. The five-minute `Assets.xcassets` wiring lands at the start of [[05-ios-app-downsized]] when `apps/ios/` exists.
 
 ## Dependencies
 
@@ -63,4 +63,4 @@ Everything else depends on this:
 - [[02-website-foundation]] needs tokens + wordmark ✓ (ribbon optional for block 2)
 - [[03-race-calendar]] needs tokens + wordmark ✓
 - [[04-pilot-intake]] needs tokens + wordmark ✓
-- [[05-ios-app-downsized]] needs tokens + wordmark ✓ + ribbon (open) + app icon (open)
+- [[05-ios-app-downsized]] needs tokens + wordmark ✓ + ribbon ✓ + app icon (pitch ready)

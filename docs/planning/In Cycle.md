@@ -2,7 +2,7 @@
 project: runtime
 type: planning-current-cycle
 status: active
-updated: 2026-05-27
+updated: 2026-05-30
 ---
 # In Cycle
 
@@ -16,16 +16,19 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 *Nothing in cycle yet.*
 
-**Block 1 (Brand System in Code) is partially shipped.** Tokens, fonts, and the wordmark component shipped on 2026-05-27 — see [[pitches/shipped/design-tokens-single-source-of-truth]], [[pitches/shipped/font-integration]], [[pitches/shipped/wordmark-as-component]], plus the pre-block-2 scaffold pulled forward in [[pitches/shipped/monorepo-nextjs-supabase-scaffold]].
-
-**Still open in block 1:**
-
-- **The race ribbon component** — *an evening*. Slot framed in [[blocks/01-brand-system-in-code]]. Needed before [[blocks/05-ios-app-downsized]]; block 2 doesn't depend on it. Can land anywhere between now and block 5.
-- **App icon assets at every size** — *an evening*. iOS-only. No web consumer. Probably defers to the start of block 5.
+See the on-deck list below for the next pickup.
 
 ## On deck
 
-Block 2's remaining pitches, in [[Sequencing]] order:
+Block 1's last slot, then block 2's queue. Order:
+
+### Block 1 — finishing the brand system in code
+
+1. **App icon assets at every size** — *an evening* — [[pitches/app-icon-assets-at-every-size]]. Master SVG + export pipeline emitting PNGs at every Apple-required size to `packages/design-tokens/dist/icons/` with a manifest. `Assets.xcassets` catalog wiring happens at the start of block 5 as a five-minute follow-up; this pitch ships everything *but* the wiring because `apps/ios/` doesn't exist yet.
+
+### Block 2 — website foundation
+
+In [[Sequencing]] order:
 
 1. **GitHub Actions CI** — *an evening*. Path-filtered workflows for web/api/ios + manual-trigger `migrations.yml`. Slot in [[blocks/02-website-foundation]].
 2. **Domain + DNS + email auth** — *an evening*. Register `runtime.training`, point at Vercel, configure SPF/DKIM/DMARC for Resend, choose email host.

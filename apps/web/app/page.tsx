@@ -1,3 +1,4 @@
+import { Ribbon } from './_components/Ribbon'
 import { Wordmark } from './_components/Wordmark'
 
 export default function Home() {
@@ -65,6 +66,32 @@ export default function Home() {
           <Wordmark size="header" theme="dark" />
         </div>
       </div>
+
+      <section className="flex flex-col gap-6 max-w-md w-full mt-4">
+        <Ribbon
+          currentWeek={1}
+          totalWeeks={12}
+          caption="Week 1 / 12 · Mechelen over 96 dagen"
+        />
+        <Ribbon
+          currentWeek={6}
+          totalWeeks={12}
+          caption="Week 6 / 12 · Mechelen over 96 dagen"
+        />
+        <Ribbon
+          currentWeek={12}
+          totalWeeks={12}
+          caption="Week 12 / 12 · Mechelen over 96 dagen"
+        />
+        <div style={{ background: 'var(--color-inkt)', padding: '1.25rem', borderRadius: '0.375rem' }}>
+          <Ribbon
+            currentWeek={4}
+            totalWeeks={18}
+            caption="Week 4 / 18 · 10 km onder het uur over 47 dagen"
+            theme="dark"
+          />
+        </div>
+      </section>
 
       <div className="flex gap-3 mt-4 flex-wrap justify-center">
         {[
