@@ -13,8 +13,8 @@ export function SiteFooter() {
         <p className="site-footer__brand-line">Het werk is het feest.</p>
       </div>
       <div className="site-footer__bottom">
-        <p>Gemaakt in Mechelen · Server in Frankfurt</p>
-        <p>© {year} runtime.training</p>
+        <p>Gemaakt in Mechelen · Server in Parijs</p>
+        <p>© {year} runtime.training · v0.2 pre-launch</p>
       </div>
     </footer>
   )

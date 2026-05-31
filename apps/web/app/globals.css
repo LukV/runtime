@@ -45,7 +45,7 @@ main {
   z-index: 50;
   background: var(--color-krijt);
   color: var(--color-inkt);
-  border-bottom: 1px solid var(--color-mist);
+  border-bottom: 1px solid var(--color-stof);
 }
 
 .site-header__bar {
@@ -112,16 +112,16 @@ main {
   max-width: 72rem;
   margin: 0 auto;
   display: flex;
-  align-items: baseline;
-  gap: var(--space-4);
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
   padding-bottom: var(--space-5);
-  border-bottom: 1px solid var(--color-mist);
+  border-bottom: 1px solid var(--color-stof);
 }
 
 .site-footer__brand-line {
   font-style: italic;
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   color: var(--color-inkt);
   margin: 0;
 }
