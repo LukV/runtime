@@ -1,3 +1,9 @@
+## v0.3.0 (2026-05-31)
+
+### Feat
+
+- **ci**: add path-filtered GitHub Actions with Playwright smoke
+
 ## v0.2.0 (2026-05-30)
 
 ### Feat
