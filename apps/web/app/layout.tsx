@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { Source_Serif_4, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import { SiteHeader } from './_components/SiteHeader'
+import { SiteFooter } from './_components/SiteFooter'
 
 // Inter Variable — self-hosted from rsms/inter canonical build. Single woff2
 // covers all weights via the variable axis.
@@ -40,7 +42,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="nl"
       className={`${inter.variable} ${sourceSerif.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        <main>{children}</main>
+        <SiteFooter />
+      </body>
     </html>
   )
 }

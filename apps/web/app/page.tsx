@@ -3,7 +3,7 @@ import { Wordmark } from './_components/Wordmark'
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-6 py-16 gap-10">
+    <div className="flex flex-col items-center px-6 py-16 gap-10">
       <p className="text-xs uppercase tracking-[0.15em]" style={{ color: 'var(--color-mist)' }}>
         Block 1 · brand system in code
       </p>
@@ -116,6 +116,6 @@ export default function Home() {
           />
         ))}
       </div>
-    </main>
+    </div>
   )
 }

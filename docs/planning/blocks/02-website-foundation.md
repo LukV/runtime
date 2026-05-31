@@ -13,7 +13,7 @@ This block is **not** the calendar page or the intake page — it's the substrat
 
 Design: [[../../product-design/004-design-system-and-screens#4. The website]].
 
-**Status: 4 of 8 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31; CI shipped 2026-05-31. Nav + footer is next.
+**Status: 5 of 8 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31; CI shipped 2026-05-31; Nav + footer shipped 2026-05-31. Page chrome (SEO + metadata) is next.
 
 ## Pitches
 
@@ -69,7 +69,7 @@ What landed: `runtime.training` registered, apex 307s to `www`, DNS A + CNAME �
 
 Future follow-ups (each ~15 min, no pitch needed): regenerate DKIM at 2048-bit; ratchet DMARC from `p=none` → `p=quarantine` → `p=reject` after watching reports; confirm `dmarc@runtime.training` actually receives mail. Resend (transactional email from the app) is deferred until block 4 needs intake confirmations.
 
-### Nav + footer as shared components — *an evening*
+### Nav + footer as shared components — *an evening* — [[../pitches/shipped/nav-footer-shared-components|shipped 2026-05-31]]
 
 Top nav: Source Serif wordmark left, *Kalender · Hoe het werkt · Over ons · Krijg de app* right. Sticky on scroll, semi-transparent ink background past the hero. Footer: wordmark + brand line *Het werk is het feest*, secondary links, copyright. Both live as `<SiteHeader />` and `<SiteFooter />` in the components folder, used across every page.
 

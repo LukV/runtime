@@ -16,7 +16,7 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 *Nothing in cycle yet.*
 
-**Block 2: 4 of 8 slots shipped.** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31). Site live, mail-auth records published, CI wired with Playwright smoke against production. Nav + footer is next.
+**Block 2: 5 of 8 slots shipped.** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31), Nav + footer (2026-05-31). Page chrome (SEO + metadata) is next.
 
 See the on-deck list below for the next pickup.
 
@@ -26,11 +26,10 @@ Block 2's queue. Order:
 
 ### Block 2 — website foundation
 
-1. **Nav + footer as shared components** — *an evening*.
-2. **Page chrome: SEO defaults + metadata helper** — *an evening*.
-3. **Hoe het werkt + Over ons + Privacy** — *a weekend*.
-4. **Plausible integration** — *an evening*.
-5. **Sentry** — *an evening*.
+1. **Page chrome: SEO defaults + metadata helper** — *an evening*.
+2. **Hoe het werkt + Over ons + Privacy** — *a weekend*.
+3. **Plausible integration** — *an evening*.
+4. **Sentry** — *an evening*.
 
 The slot framings in [[blocks/02-website-foundation]] are detailed enough for several of these to start without a full pitch note — write the file when the shape isn't obvious.
 
