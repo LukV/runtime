@@ -16,7 +16,7 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 *Nothing in cycle yet.*
 
-**Block 1 fully shipped on 2026-05-30** (v0.1.0 + v0.2.0). **Block 2 is in progress** — three slots shipped (monorepo scaffold pulled forward in block 1; Vercel project setup + domain/DNS/mail-auth shipped together 2026-05-31). Site is live at https://www.runtime.training.
+**Block 2: 4 of 8 slots shipped.** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31). Site live, mail-auth records published, CI wired with Playwright smoke against production. Nav + footer is next.
 
 See the on-deck list below for the next pickup.
 
@@ -26,12 +26,11 @@ Block 2's queue. Order:
 
 ### Block 2 — website foundation
 
-1. **GitHub Actions CI** — *an evening* — [[pitches/github-actions-ci|pitch drafted]]. Path-filtered `ci.yml` with active `web-ci` (lint + typecheck + build + Playwright smoke against the Vercel preview) and stub `api-ci`/`ios-ci` jobs that wake up when their dirs land.
-2. **Nav + footer as shared components** — *an evening*.
-3. **Page chrome: SEO defaults + metadata helper** — *an evening*.
-4. **Hoe het werkt + Over ons + Privacy** — *a weekend*.
-5. **Plausible integration** — *an evening*.
-6. **Sentry** — *an evening*.
+1. **Nav + footer as shared components** — *an evening*.
+2. **Page chrome: SEO defaults + metadata helper** — *an evening*.
+3. **Hoe het werkt + Over ons + Privacy** — *a weekend*.
+4. **Plausible integration** — *an evening*.
+5. **Sentry** — *an evening*.
 
 The slot framings in [[blocks/02-website-foundation]] are detailed enough for several of these to start without a full pitch note — write the file when the shape isn't obvious.
 

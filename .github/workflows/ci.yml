@@ -1,0 +1,102 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+# Cancel in-flight runs for the same branch when a new commit is pushed.
+# Saves CI minutes on rapid iteration; no effect on main.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+  # Detect which app's files changed so per-app jobs only run when relevant.
+  # Top-level `paths:` filters skip the whole workflow, which makes PRs show
+  # zero checks — indistinguishable from "checks pending" in the GitHub UI.
+  # Doing the filter here lets every PR record a result for every job.
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      web: ${{ steps.filter.outputs.web }}
+      api: ${{ steps.filter.outputs.api }}
+      ios: ${{ steps.filter.outputs.ios }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            web:
+              - 'apps/web/**'
+              - 'packages/**'
+              - 'package.json'
+              - 'package-lock.json'
+              - '.github/workflows/ci.yml'
+            api:
+              - 'apps/api/**'
+            ios:
+              - 'apps/ios/**'
+
+  web-ci:
+    needs: changes
+    if: needs.changes.outputs.web == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm --workspace apps/web run lint
+      - run: npm --workspace apps/web run typecheck
+      - run: npm --workspace apps/web run build
+
+  web-smoke:
+    needs: [changes, web-ci]
+    # Only runs on PRs — push to main has no PR-scoped Vercel preview.
+    # Production deploys verify themselves through Vercel's own checks.
+    if: needs.changes.outputs.web == 'true' && github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      # Polls GitHub's deployment API until Vercel posts the preview URL for
+      # this PR's head SHA. Times out at 3 minutes (typical Vercel build < 90s).
+      - id: vercel
+        uses: patrickedqvist/wait-for-vercel-preview@v1.3.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_timeout: 180
+      - run: npx playwright install --with-deps chromium
+      - run: npm --workspace apps/web run test:smoke
+        env:
+          PREVIEW_URL: ${{ steps.vercel.outputs.url }}
+
+  # Placeholder — wakes up automatically when apps/api/ lands (block 6).
+  # Will run: uv sync, ruff check, ruff format --check, mypy, pytest.
+  api-ci:
+    needs: changes
+    if: needs.changes.outputs.api == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "apps/api/ not yet created; this job is a stub until block 6"
+
+  # Placeholder — wakes up automatically when apps/ios/ lands (block 5).
+  # Will run: swiftlint, xcodebuild. macos-latest is billed at 10× ubuntu;
+  # revisit runner choice if iOS PR volume grows.
+  ios-ci:
+    needs: changes
+    if: needs.changes.outputs.ios == 'true'
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "apps/ios/ not yet created; this job is a stub until block 5"

@@ -43,6 +43,18 @@ npm run format             # prettier --write across the repo
 npm run generate:tokens    # regenerate dist/ in packages/design-tokens
 ```
 
+## Quality gates
+
+Local gates run via `.claude/skills/local-gates` — lint + typecheck + build per app whose directory exists. Run them before pushing non-trivial changes.
+
+CI runs the same gates via GitHub Actions on every PR to `main` and every push to `main`. Path-filtered: a PR touching only `apps/web/**` runs the web checks (lint, typecheck, build, Playwright smoke against the Vercel preview URL) and skips the iOS/api jobs entirely. The `api-ci` and `ios-ci` jobs are wired but never trigger until their app directories exist.
+
+The Playwright smoke can also be run locally — it defaults to `https://www.runtime.training` when `PREVIEW_URL` isn't set:
+
+```sh
+npm --workspace apps/web run test:smoke
+```
+
 ## Supabase (manual setup)
 
 The `supabase/` directory holds migrations and seed data. The Supabase *project* (Postgres + Auth + Storage) is created once via the Supabase web UI:

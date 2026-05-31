@@ -13,7 +13,7 @@ This block is **not** the calendar page or the intake page — it's the substrat
 
 Design: [[../../product-design/004-design-system-and-screens#4. The website]].
 
-**Status: 3 of 8 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31. CI is next.
+**Status: 4 of 8 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31; CI shipped 2026-05-31. Nav + footer is next.
 
 ## Pitches
 
@@ -44,7 +44,7 @@ ESLint + Prettier configured at the workspace root, shared across packages. READ
 
 Pulled out of the originally-folded `Domain + DNS + email auth` slot to land first — Vercel previews unlock CI's Playwright smoke and become the deploy target for the domain pitch. Live at `https://www.runtime.training`, serving from `cdg1` (Paris).
 
-### GitHub Actions CI — *an evening* — [[../pitches/github-actions-ci|pitch drafted]]
+### GitHub Actions CI — *an evening* — [[../pitches/shipped/github-actions-ci|shipped 2026-05-31]]
 
 Per [[../../architecture/001-stack-decisions#CI/CD]]. Three workflows in `.github/workflows/`:
 
