@@ -1,3 +1,13 @@
+## v0.4.0 (2026-05-31)
+
+### Feat
+
+- **web**: wrap pages in SiteHeader + SiteFooter chrome
+
+### Fix
+
+- **ci**: bump actions to Node 24 compatible versions
+
 ## v0.3.0 (2026-05-31)
 
 ### Feat
