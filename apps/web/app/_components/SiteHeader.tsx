@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { Wordmark } from './Wordmark'
 
-// Per 004 §1 / §4 — wordmark left, four right-side items. Permanent Inkt
-// background; the originally-pitched scroll-fade is deferred until the
-// calendar's hero exists and the wordmark-on-hero contrast can be chosen
-// against a known background (see nav-footer-shared-components pitch risks).
+// Per 004 §1 / §4 — wordmark left, four right-side items, transparent on
+// the body's Krijt ground with just a thin Mist divider beneath. The amber
+// (Eerste licht) is reserved for accent dots — wordmark period and ribbon
+// dot — never for chrome buttons (004 §1: "the warmth doesn't scale").
 //
 // "Download de app" is a mailto: as a poor-man's waitlist until the pilot
 // intake pitch wires a real /pilot route.
@@ -21,7 +21,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="site-header__bar">
         <Link href="/" aria-label="runtime — naar de homepage" className="site-header__wordmark">
-          <Wordmark size="header" theme="dark" />
+          <Wordmark size="header" theme="light" />
         </Link>
         <nav aria-label="Hoofdnavigatie">
           <ul className="site-header__nav">

@@ -33,14 +33,19 @@ main {
   flex: 1;
 }
 
-/* ----- Site header ----- */
+/* ----- Site header -----
+   Per 004 §4: transparent header on the body's Krijt ground, separated
+   from the page below by a thin Mist hairline. Wordmark + nav items in
+   Inkt; CTA is a small Inkt pill (Krijt text). Amber stays out of the
+   chrome — it's an accent color, not a UI color (004 §1). */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--color-inkt);
-  color: var(--color-krijt);
+  background: var(--color-krijt);
+  color: var(--color-inkt);
+  border-bottom: 1px solid var(--color-mist);
 }
 
 .site-header__bar {
@@ -70,27 +75,28 @@ main {
 }
 
 .site-header__nav a {
-  color: var(--color-krijt);
+  color: var(--color-inkt);
   text-decoration: none;
   transition: color var(--motion-transition);
 }
 
 .site-header__nav a:hover {
-  color: var(--color-eerste-licht);
+  color: var(--color-houtskool);
 }
 
 .site-header__cta {
   display: inline-block;
   padding: 0.5rem 0.875rem;
   border-radius: 999px;
-  background: var(--color-eerste-licht);
-  color: var(--color-inkt) !important;
+  background: var(--color-inkt);
+  color: var(--color-krijt) !important;
   font-weight: 500;
+  transition: background var(--motion-transition);
 }
 
 .site-header__cta:hover {
-  color: var(--color-inkt) !important;
-  filter: brightness(1.05);
+  color: var(--color-krijt) !important;
+  background: var(--color-nacht);
 }
 
 /* ----- Site footer ----- */
