@@ -2,7 +2,7 @@
 project: runtime
 type: planning-current-cycle
 status: active
-updated: 2026-05-30
+updated: 2026-05-31
 ---
 # In Cycle
 
@@ -16,7 +16,7 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 *Nothing in cycle yet.*
 
-**Block 1 (Brand System in Code) is fully shipped on 2026-05-30.** All 5 slots landed across two release boundaries — tokens, fonts, and wordmark on 2026-05-27 (v0.1.0); the race ribbon and the app icon on 2026-05-30. Block 2 (Website Foundation) is next.
+**Block 1 fully shipped on 2026-05-30** (v0.1.0 + v0.2.0). **Block 2 is in progress** — three slots shipped (monorepo scaffold pulled forward in block 1; Vercel project setup + domain/DNS/mail-auth shipped together 2026-05-31). Site is live at https://www.runtime.training.
 
 See the on-deck list below for the next pickup.
 
@@ -26,14 +26,17 @@ Block 2's queue. Order:
 
 ### Block 2 — website foundation
 
-In [[Sequencing]] order:
-
-1. **GitHub Actions CI** — *an evening*. Path-filtered workflows for web/api/ios + manual-trigger `migrations.yml`. Slot in [[blocks/02-website-foundation]].
-2. **Domain + DNS + email auth** — *an evening*. Register `runtime.training`, point at Vercel, configure SPF/DKIM/DMARC for Resend, choose email host.
-3. **Nav + footer as shared components** — *an evening*.
-4. **Page chrome: SEO defaults + metadata helper** — *an evening*.
-5. **Hoe het werkt + Over ons + Privacy** — *a weekend*.
-6. **Plausible integration** — *an evening*.
-7. **Sentry** — *an evening*.
+1. **GitHub Actions CI** — *an evening* — [[pitches/github-actions-ci|pitch drafted]]. Path-filtered `ci.yml` with active `web-ci` (lint + typecheck + build + Playwright smoke against the Vercel preview) and stub `api-ci`/`ios-ci` jobs that wake up when their dirs land.
+2. **Nav + footer as shared components** — *an evening*.
+3. **Page chrome: SEO defaults + metadata helper** — *an evening*.
+4. **Hoe het werkt + Over ons + Privacy** — *a weekend*.
+5. **Plausible integration** — *an evening*.
+6. **Sentry** — *an evening*.
 
 The slot framings in [[blocks/02-website-foundation]] are detailed enough for several of these to start without a full pitch note — write the file when the shape isn't obvious.
+
+### Optional follow-ups (no pitch yet)
+
+- **DKIM regenerate at 2048-bit + ratchet DMARC to `p=quarantine`** — *15 min*. Future evening when aggregate reports have been observed for ~2 weeks.
+- **Supabase project + `migrations.yml` workflow** — separate pitch when the first migration exists (probably block 4 or 6).
+- **Resend setup + transactional email DKIM selector** — separate pitch when the first transactional sender exists (likely block 4 intake confirmations).

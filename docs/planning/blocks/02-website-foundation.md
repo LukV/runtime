@@ -2,8 +2,8 @@
 project: runtime
 type: planning-block
 block: website-foundation
-status: not-started
-updated: 2026-05-26
+status: in-progress
+updated: 2026-05-31
 ---
 # Block 2 — Website Foundation
 
@@ -13,9 +13,11 @@ This block is **not** the calendar page or the intake page — it's the substrat
 
 Design: [[../../product-design/004-design-system-and-screens#4. The website]].
 
+**Status: 3 of 8 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31. CI is next.
+
 ## Pitches
 
-### Monorepo + Next.js + Supabase scaffold — *an evening*
+### Monorepo + Next.js + Supabase scaffold — *an evening* — [[../pitches/shipped/monorepo-nextjs-supabase-scaffold|shipped 2026-05-27]]
 
 Single GitHub monorepo, exact structure per [[../../architecture/001-stack-decisions#Monorepo structure]]:
 
@@ -38,7 +40,11 @@ ESLint + Prettier configured at the workspace root, shared across packages. READ
 - Database migration tooling beyond the Supabase CLI.
 - CMS.
 
-### GitHub Actions CI — *an evening*
+### Vercel project setup — *an evening* — [[../pitches/shipped/vercel-project-setup|shipped 2026-05-31]]
+
+Pulled out of the originally-folded `Domain + DNS + email auth` slot to land first — Vercel previews unlock CI's Playwright smoke and become the deploy target for the domain pitch. Live at `https://www.runtime.training`, serving from `cdg1` (Paris).
+
+### GitHub Actions CI — *an evening* — [[../pitches/github-actions-ci|pitch drafted]]
 
 Per [[../../architecture/001-stack-decisions#CI/CD]]. Three workflows in `.github/workflows/`:
 
@@ -55,11 +61,13 @@ Web + API deploys handled by Vercel and Railway's native GitHub integrations —
 
 *Note for first run.* The `ios-ci` job stays as a placeholder until [[05-ios-app-downsized]] adds the Xcode project — until then it'll never trigger (no matching paths).
 
-### Domain + DNS + email auth — *an evening*
+### Domain + DNS + email auth — *an evening* — **shipped 2026-05-31** (no pitch file, work done in DNS UI)
 
-Register `runtime.training` if not yet done. Point at Vercel for web. Configure SPF, DKIM, DMARC for Resend on the domain. Set up MX for inbound (Luk needs `hello@runtime.training` and `luk@runtime.training` — recommend Fastmail or Google Workspace, low ceremony).
+Originally framed as Vercel + DNS + SPF/DKIM/DMARC + MX in one slot. Vercel half got carved into its own pitch ([[../pitches/shipped/vercel-project-setup]]); the rest shipped without a pitch file because Luk did it directly in the registrar and Google Workspace admin in one sitting.
 
-*Risk.* DNS propagation eats time. Do this on a Saturday morning, not an evening before a launch.
+What landed: `runtime.training` registered, apex 307s to `www`, DNS A + CNAME → Vercel, MX → `smtp.google.com`, Google Workspace alias `luk@runtime.training`, SPF (`v=spf1 include:_spf.google.com ~all`), DMARC at `p=none` with `rua=mailto:dmarc@runtime.training`, DKIM at `google._domainkey` (1024-bit RSA).
+
+Future follow-ups (each ~15 min, no pitch needed): regenerate DKIM at 2048-bit; ratchet DMARC from `p=none` → `p=quarantine` → `p=reject` after watching reports; confirm `dmarc@runtime.training` actually receives mail. Resend (transactional email from the app) is deferred until block 4 needs intake confirmations.
 
 ### Nav + footer as shared components — *an evening*
 
