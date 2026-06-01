@@ -8,4 +8,6 @@ test('smoke: site loads and wordmark renders', async ({ page, baseURL }) => {
   const response = await page.goto('/')
   expect(response?.status(), `expected 200 from ${baseURL}`).toBe(200)
   await expect(page.getByRole('img', { name: 'runtime' }).first()).toBeVisible()
+  // The page chrome ships a build-time OG image; lock its presence into CI.
+  await expect(page.locator('meta[property="og:image"]')).toHaveCount(1)
 })
