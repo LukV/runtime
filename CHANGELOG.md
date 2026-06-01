@@ -1,3 +1,9 @@
+## v0.7.0 (2026-06-01)
+
+### Feat
+
+- **web**: add Plausible analytics with CTA event tracking
+
 ## v0.6.0 (2026-06-01)
 
 ### Feat
