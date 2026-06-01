@@ -1,3 +1,9 @@
+## v0.6.0 (2026-06-01)
+
+### Feat
+
+- **web**: static content pages — hoe het werkt, over ons, meebouwen, privacy
+
 ## v0.5.0 (2026-06-01)
 
 ### Feat
