@@ -18,17 +18,17 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 See the on-deck list below for the next pickup.
 
-**Block 2: 8 of 9 slots shipped.** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31), Nav + footer (2026-05-31), Page chrome / SEO + metadata (2026-06-01), Hoe het werkt + Over ons + Meebouwen + Privacy (2026-06-01), Plausible analytics (2026-06-01). Sentry is the last slot before block 2 closes.
+**Block 2: complete — 9 of 9 slots shipped (2026-06-01).** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31), Nav + footer (2026-05-31), Page chrome / SEO + metadata (2026-06-01), Hoe het werkt + Over ons + Meebouwen + Privacy (2026-06-01), Plausible analytics (2026-06-01), Sentry error monitoring (2026-06-01). The website foundation is done — next is [[blocks/03-race-calendar]], the traffic engine.
 
 ## On deck
 
-Block 2's queue. Order:
+Block 2 is closed. Next block is [[blocks/03-race-calendar]] — the traffic engine, and the biggest non-app block in the plan. First pickup:
 
-### Block 2 — website foundation
+### Block 3 — race calendar
 
-1. **Sentry** — *an evening*. The last slot in block 2.
+1. **Schema for `races`, `organizers`, `race_submissions`** — *an evening*. The Postgres tables the calendar reads from. Note the dependency: race reads go through FastAPI ([[blocks/06-coach-backend-woz]]), and the Supabase project + `migrations.yml` workflow aren't stood up yet — so this slot likely pulls some of that scaffolding forward. Worth a full pitch note rather than starting straight from the slot framing.
 
-The slot framings in [[blocks/02-website-foundation]] are detailed enough for several of these to start without a full pitch note — write the file when the shape isn't obvious.
+The slot framings in [[blocks/03-race-calendar]] carry the detail; write a pitch note when the shape isn't obvious (the schema slot qualifies).
 
 ### Optional follow-ups (no pitch yet)
 

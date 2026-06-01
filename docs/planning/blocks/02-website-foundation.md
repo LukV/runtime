@@ -2,8 +2,8 @@
 project: runtime
 type: planning-block
 block: website-foundation
-status: in-progress
-updated: 2026-05-31
+status: complete
+updated: 2026-06-01
 ---
 # Block 2 — Website Foundation
 
@@ -13,7 +13,7 @@ This block is **not** the calendar page or the intake page — it's the substrat
 
 Design: [[../../product-design/004-design-system-and-screens#4. The website]].
 
-**Status: 8 of 9 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31; CI shipped 2026-05-31; Nav + footer shipped 2026-05-31; Page chrome (SEO + metadata) shipped 2026-06-01; Hoe het werkt + Over ons + Meebouwen + Privacy shipped 2026-06-01; Plausible analytics shipped 2026-06-01. Sentry is the last slot before block 2 closes.
+**Status: complete — 9 of 9 slots shipped (2026-06-01).** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31; CI shipped 2026-05-31; Nav + footer shipped 2026-05-31; Page chrome (SEO + metadata) shipped 2026-06-01; Hoe het werkt + Over ons + Meebouwen + Privacy shipped 2026-06-01; Plausible analytics shipped 2026-06-01; Sentry error monitoring shipped 2026-06-01. Block 2 is done — next is [[03-race-calendar]].
 
 ## Pitches
 
@@ -106,9 +106,13 @@ What landed: the Plausible script via `next/script` (`app/_components/Plausible.
 
 Deferred to the blocks that create them (the original slot listed these, but the pages don't exist yet): outbound clicks to organizer registration URLs from race pages ([[03-race-calendar]]), waitlist + pilot-intake form submissions ([[04-pilot-intake]]). No custom dimensions, no bespoke funnels. The proxy/tunnel option was skipped for now (low-traffic pilot; revisit if events go missing to ad-blockers).
 
-### Sentry — *an evening*
+### Sentry — *an evening* — **shipped 2026-06-01** (no pitch file — built straight from this slot framing)
 
-Per [[../../architecture/001-stack-decisions#Sentry for error monitoring]]. Sentry SDK in both Next.js and FastAPI. Free tier. Source maps uploaded on deploy. Alerts to Luk's email on first occurrence of a new error in prod.
+Per [[../../architecture/001-stack-decisions#Sentry for error monitoring]].
+
+What landed: `@sentry/nextjs` App Router instrumentation across browser/node/edge runtimes (`instrumentation.ts`, `instrumentation-client.ts`, `sentry.{server,edge}.config.ts`) plus a root `global-error.tsx` boundary. Errors only — no tracing, profiling, or session replay. Gated to production with a DSN present, so dev and un-configured deploys stay silent. Source maps upload on Vercel builds via `SENTRY_AUTH_TOKEN`/`ORG`/`PROJECT`. Alert rule (email Luk on a new issue's first occurrence) set in the dashboard. Client SDK adds ~80 kB First Load JS — accepted for now on a low-traffic pilot; revisit (server-only) if it bites the perf/SEO budget.
+
+Deferred: the **FastAPI half** waits for [[06-coach-backend-woz]] — `apps/api` is still a placeholder, so there's no Python service to instrument yet. No ad-blocker tunnel for now.
 
 *Out of scope.* Performance monitoring, session replay, user feedback widgets. Errors only.
 
