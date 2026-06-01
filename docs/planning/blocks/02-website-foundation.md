@@ -13,7 +13,7 @@ This block is **not** the calendar page or the intake page — it's the substrat
 
 Design: [[../../product-design/004-design-system-and-screens#4. The website]].
 
-**Status: 7 of 8 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31; CI shipped 2026-05-31; Nav + footer shipped 2026-05-31; Page chrome (SEO + metadata) shipped 2026-06-01; Hoe het werkt + Over ons + Meebouwen + Privacy shipped 2026-06-01. Plausible integration is next.
+**Status: 8 of 9 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31; CI shipped 2026-05-31; Nav + footer shipped 2026-05-31; Page chrome (SEO + metadata) shipped 2026-06-01; Hoe het werkt + Over ons + Meebouwen + Privacy shipped 2026-06-01; Plausible analytics shipped 2026-06-01. Sentry is the last slot before block 2 closes.
 
 ## Pitches
 
@@ -98,17 +98,13 @@ Three static pages.
 
 *Out of scope.* Blog, press kit, jobs, careers. Those come never (or much later).
 
-### Plausible integration — *an evening*
+### Plausible integration — *an evening* — **shipped 2026-06-01** (no pitch file — built straight from this slot framing)
 
-Per [[../../architecture/001-stack-decisions#Plausible for analytics]]. Add the Plausible script (or proxy through Next.js to avoid ad-blockers). Track:
-- Page views (default)
-- Pilot intake CTA clicks
-- "Krijg de app" CTA clicks
-- Outbound clicks to organizer registration URLs from race pages
-- Waitlist form submissions
-- Pilot intake form submissions
+Per [[../../architecture/001-stack-decisions#Plausible for analytics]].
 
-No custom dimensions. No funnels beyond what Plausible offers out of the box. Privacy page documents what's tracked.
+What landed: the Plausible script via `next/script` (`app/_components/Plausible.tsx`), gated to production so dev traffic stays out of the dashboard. Page views out of the box. The two CTA conversions that exist today are wired as custom events through a typed `trackEvent()` wrapper (`lib/plausible.ts`): `CTA: Download de app` (header pilot mailto) and `CTA: Meebouwen e-mail` (partner mailto). Goals registered in the Plausible dashboard under those names. Privacy page already documents the posture.
+
+Deferred to the blocks that create them (the original slot listed these, but the pages don't exist yet): outbound clicks to organizer registration URLs from race pages ([[03-race-calendar]]), waitlist + pilot-intake form submissions ([[04-pilot-intake]]). No custom dimensions, no bespoke funnels. The proxy/tunnel option was skipped for now (low-traffic pilot; revisit if events go missing to ad-blockers).
 
 ### Sentry — *an evening*
 

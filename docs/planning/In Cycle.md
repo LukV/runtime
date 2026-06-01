@@ -18,7 +18,7 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 See the on-deck list below for the next pickup.
 
-**Block 2: 7 of 8 slots shipped.** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31), Nav + footer (2026-05-31), Page chrome / SEO + metadata (2026-06-01), Hoe het werkt + Over ons + Meebouwen + Privacy (2026-06-01).
+**Block 2: 8 of 9 slots shipped.** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31), Nav + footer (2026-05-31), Page chrome / SEO + metadata (2026-06-01), Hoe het werkt + Over ons + Meebouwen + Privacy (2026-06-01), Plausible analytics (2026-06-01). Sentry is the last slot before block 2 closes.
 
 ## On deck
 
@@ -26,8 +26,7 @@ Block 2's queue. Order:
 
 ### Block 2 — website foundation
 
-1. **Plausible integration** — *an evening*.
-2. **Sentry** — *an evening*.
+1. **Sentry** — *an evening*. The last slot in block 2.
 
 The slot framings in [[blocks/02-website-foundation]] are detailed enough for several of these to start without a full pitch note — write the file when the shape isn't obvious.
 
