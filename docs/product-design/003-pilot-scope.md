@@ -199,117 +199,91 @@ The sketches don't need to be high-fidelity. They need to be coherent enough tha
 
 ---
 
-## 8. Recruiting the 20 pilot runners
+## 8. Going to market — calendar first, coaching partner-gated
 
-The recruiting work runs in parallel with the app build. Two-track delivery: the app track produces the demonstration the partner sees; the recruiting track produces the runners she'll coach.
+The original plan here assumed a coach on board from week one and ran runner-recruiting in parallel with the build (the two-track delivery in §9). That assumption no longer holds, and the go-to-market is resequenced around it.
 
-### The target
+Two things changed. The coaching partner — *An* in the designs — is not yet found. And the founder-honest constraint: Luk does the partner-and-runner outreach *once the product is at a level he's convinced by*, not before. Outreach is the hard part; it only happens from a position of *"this is real, look."* Against that, recruiting twenty strangers into a coached pilot — before there's a coach, or a convincing app — is the wrong first move.
 
-- 20 Flemish recreational runners (not elite, not first-timers)
-- Between 15–65 years old, flex on the edges. Marathon runners, and beginners.
-- Goal race or goal in the next 12–16 weeks (jogging, 10K, 15K, half — anything with a real date, *or* a clear distance/time goal)
-- Willing to do a short weekly check-in via the app (or WhatsApp for the iPhone-less minority)
-- Basic Strava use (so we sync logs instead of asking them to type workouts)
-- Honest and communicative — *not* the type who only reports their best days
+So the question §8 now answers is narrower and more honest: **what can go public, and earn trust, before a coach exists and before Luk is ready for active outreach?** Three things. None of them depend on the partner.
 
-Selecting for **committed and communicative**, not fast. A 70-minute 10K runner who finishes the 12 weeks and tells us when something doesn't work is worth ten 45-minute 10K runners who ghost in week four.
+### 8.1 The calendar goes out first
 
-### The pitch
+The public surface is the race calendar, not a recruiting landing page. This is the vision's funnel spine ([[001-product-vision#The race calendar — the spine, and the funnel]]) and the website is already designed calendar-first ([[004-design-system-and-screens#4. The website]]): a genuinely useful list of ~100 Flemish races over the next six months, earning hyper-local SEO (*"stadsloop mechelen 2026"*) and giving every visitor something worth the click whether or not they ever sign up.
 
-> 12 weeks of free, hands-on coaching from a real coach, tailored to your goal race or goal. In exchange: a short weekly check-in, honest feedback, and permission to use what we learn (anonymously is fine) to design the product.
+The calendar carries the product's whole story without a coach in the room: *kies een wedstrijd, krijg een plan tot eraan toe.* The two CTAs threaded through it (per 004 §4) are resequenced for this phase:
 
-What's actually being sold: **be the first 20 people in something that's going to be bigger.** Older recreational runners respond well to *co-designer*, badly to *beta tester*.
+- **App / TestFlight nudge** (ink) — the primary call now. Not *"apply to a coached pilot"*; *"test the app as it's being built."*
+- **Waitlist band** (quiet ink) — for the visitor who isn't ready to test but wants to be told when it's ready.
+- The **pilot card** 004 §4 placed mid-list is *held* — it promises live coaching there isn't yet a coach for. Its slot is taken, for now, by the **call for partners** (§8.3).
 
-What they get that they can't get elsewhere:
+### 8.2 The waitlist is a TestFlight on-ramp, not a someday-list
 
-- A plan tied to their *specific* race (or specific goal), not a generic 10K block
-- A real human coach on the other end (Luk and the dietist), not an algorithm
-- A chance to shape the product before it exists
+This is the mechanic that makes the build self-correcting without a coach. The waitlist doesn't collect emails for a far-off launch — it invites runners into the TestFlight build as the app matures. That puts real runners on real screens, and real feedback in Luk's hands, *while* he's still building and *before* there's a partner or a coached pilot. It is the direct answer to the genuine risk in this plan (§8.4): building toward "convincing" in a vacuum.
 
-### The waiting-list landing page (`runtime.training`)
+Honesty discipline, unchanged: no launch-date promise, no fake social proof, no *"join 10.000 lopers."* And one promise that must *not* be made yet — **live human coaching.** Until a partner is on board, the TestFlight app is the calendar, the plan, the ribbon, and the conversation surface; the coaching behind that surface is not staffed. The waitlist sells *early access and a hand in shaping it*, not coaching. Conversion line on the form: *Inschrijven is de eerste training.*
 
-Single page. Flemish primary, English secondary. Three goals:
+### 8.3 The call for partners is now a first-class surface
 
-1. **Capture two distinct audiences:** (a) general waiting list — email only, for product launch later; (b) pilot applicants — email plus 5 intake questions, filtered to 20.
-2. **Build trust fast** — Luk's face, his name, a one-paragraph *"why I'm building this,"* a recent race photo. No stock imagery, no fake testimonials, no app-store badges (there's no app yet, publicly).
-3. **Stay honest** — no launch date promise, no *"join 10,000 runners"* social-proof faking. The pilot exists to discover what the product is.
+Recruiting the coach was always the gating dependency; it stops being a footnote and becomes a public, standing ask. It lives on *Over ons* (the "op zoek naar partners" section, drawn from Luk's own words) and quietly in the calendar where the pilot card used to be. Addressed to coaches, sport scientists, and students sport- en bewegingswetenschappen — anyone who can ground the plans in real coaching science.
 
-Page skeleton (full copy is task #1):
+The framing is Luk's, and it's load-bearing: **the schedules come from sports science and human expertise, not from AI.** AI's job is to make coaching conversational and accessible — explain a plan, answer a question, translate expert advice into plain language — never to invent the training. A partner reading that understands exactly what they would own and what they would not.
 
-- Headline: *Een trainingsplan dat zich aanpast aan jouw week — en jouw doelwedstrijd.*
-- One-paragraph *"why I'm building this"* in Luk's voice
-- What you get (3 bullets)
-- Two CTAs side by side: **Schrijf me in op de wachtlijst** (waiting list) vs. **Doe mee aan de pilot** (apply)
-- Pilot intake — 5 questions: recent 5K or 10K time, weekly km last month, age bracket, target race or goal + date, comfortable with weekly check-in?
-- One-line GDPR / privacy note
+Making this public does two jobs at once. It lets a partner find Luk (inbound) while he is still building toward the moment he is ready to reach out (outbound). And it states the product's integrity commitment in the open, which is itself trust-building for runners.
 
-### Five recruitment channels, ranked
+### 8.4 The honest tradeoff — and the trigger that ends it
 
-Ordered by best ratio of effort to plausible yield. Run them in sequence — don't try to run all five at once.
+This sequencing bends the §1 logic in one direction worth naming. §1 argued the app exists to *earn a partner* by showing her the product the WoZ rehearses. That is still true; what changed is that the showing now happens through a shipped TestFlight build and a live calendar rather than a parallel recruiting push. The app-to-earn-a-partner thesis survives — only the timing moves.
 
-**1. Luk's own network — highest signal, lowest effort.** Running friends; son's running friends; anyone in WhatsApp running circles already in. Co-workers who run. Friend-of-friend referrals. Direct DM, not a group blast. Personal ask. Tell them it's a real thing, only 20 people, and their input is valued specifically. **Expected yield: 5–8 runners.**
+The real risk is the founder one, stated plainly: *"I'll reach out once it's good enough"* has no natural end. Good-enough can recede forever. Two guards:
 
-**2. Local running clubs — atletiek and recreational joggings.** Flanders has every commune covered. VAL-affiliated atletiek clubs are the official structure; recreational jogging groups (*joggingteams* or *loopgroepen*) are the better demographic fit — less competitive, exactly the 40–65 sweet spot. Pick 5–8 clubs within 20 km. Email the secretary or jogging coordinator with a short pitch + landing URL. Offer a free 30-minute Q&A at their next group run. **Expected yield: ~2 runners per responsive club**, so 8–12 across 5 clubs that say yes.
+1. **The TestFlight waitlist forces contact early.** Testers are giving feedback long before the coach or the coached pilot exist. The build is shaped by users either way.
+2. **A named trigger, set now, that flips outreach on.** Pick a concrete, falsifiable line — e.g. *calendar live with 50+ races, a TestFlight build that carries a runner through intake → plan → a week of the ribbon, and 10 active testers* — and when it is met, partner outreach and the coached-pilot recruiting (§8.5) begin, convinced-or-not. Without a line, "convinced" is a feeling, and feelings stall.
 
-**3. Facebook groups for Flemish runners.** Verify the currently-active ones (groups churn): regional running groups per province, *Loopgroepen Vlaanderen*-style umbrella groups, Strava clubs filtered to Belgium / Flanders. Post **once**, transparently. A single sincere post — *"ik bouw iets voor lopers zoals ons, zoek 20 testers, gratis coaching gedurende 12 weken"* — works. Three posts in a week looks desperate. **Expected yield: 3–5 runners** if the right group is hit at the right moment.
+### 8.5 The coached pilot — gated, not cancelled
 
-**4. Local race start lines — high friction, high authenticity.** Pick 3–4 joggings happening in the next 4 weeks within driving distance. Print 100 small QR-code flyers pointing to `runtime.training/pilot`. Hand them out at the start line. Side benefit: meet 2–3 race organizers in passing — start of the relationships needed for the calendar side later. **Expected yield: 2–4 runners**, plus relationship deposits with organizers.
+The 20-runner coached pilot is still the plan; it is simply downstream of a partner saying yes. Everything written for it holds and waits for that yes.
 
-**5. Running shoe stores — slow, but unlocks more later.** Runners' Lab, Avia Sport, and local specialty stores. They host group runs, hold customer lists, and want reasons to stay culturally relevant. Pitch the store manager: offer a free 30-minute intro coaching session for their next group run. **Expected yield: 2–3 runners per partnered store**, plus a future paid-customer acquisition channel.
+**The target.** 20 Flemish recreational runners (not elite, not first-timers), roughly 15–65 with flex on the edges, each with a goal race or clear goal in the next 12–16 weeks, willing to do a short weekly check-in (app, or WhatsApp for the iPhone-less minority), basic Strava users, and above all honest and communicative. Selecting for **committed and communicative, not fast.** A 70-minute 10K runner who finishes the twelve weeks and tells us when something doesn't work is worth ten 45-minute runners who ghost in week four.
 
-### Two-week sequencing (kicks off when `runtime.training` goes live)
+**The pitch (once there is a coach to back it).** Twelve weeks of free, hands-on coaching from a real coach, tailored to the runner's goal; in exchange, a short weekly check-in, honest feedback, and permission to use what's learned (anonymised) to design the product. What is sold is *be the first 20 in something that's going to be bigger* — older recreational runners respond well to *co-designer*, badly to *beta tester*.
 
-**Week 1**
+**The channels, ranked by effort-to-yield, run in sequence — not all at once:**
 
-- Ship the waiting-list landing page
-- Channel 1: DM 15–20 people in personal network directly
-- Channel 2: Draft the club outreach email, identify 5 clubs
+1. **Luk's own network** — highest signal, lowest effort. Running friends, his son's running friends, WhatsApp running circles, co-workers who run, friend-of-friend referrals. Direct personal DMs, not a group blast. *Expected: 5–8.* This is also the channel Luk most avoids; §8.4's trigger exists partly to make him work it.
+2. **Local running clubs** — recreational *loopgroepen / joggingteams* over competitive VAL atletiekclubs; better fit for the 40–65 sweet spot. 5–8 clubs within 20 km, a short pitch to the jogging coordinator, an offer of a free 30-minute Q&A at a group run. *Expected: ~2 per responsive club.*
+3. **Facebook groups for Flemish runners** — regional and umbrella loopgroepen, Belgium/Flanders Strava clubs. Post **once**, sincerely. Three posts in a week looks desperate. *Expected: 3–5.*
+4. **Local race start lines** — 3–4 nearby joggings in the coming weeks, 100 small QR-flyers to `runtime.training`. Side benefit: meet 2–3 race organisers — the start of the calendar-side relationships. *Expected: 2–4, plus organiser goodwill.*
+5. **Running shoe stores** — Runners' Lab, Avia Sport, local specialists; offer a free intro session at a group run. Slow, but a future paid-acquisition channel. *Expected: 2–3 per partnered store.*
 
-**Week 2**
+**Success criteria, when the phase runs:** 20 confirmed within three weeks of starting; 80%+ with a goal within 8–16 weeks; full reachability via the in-app conversation (or WhatsApp); at least three Flemish provinces represented; at least five runners in the 50–65 bracket, the underserved demographic. If 20 isn't hit, the failure mode is almost always channel 1 — Luk held back from asking the people closest to him.
 
-- Channel 2: Send the 5 club emails
-- Channel 3: One sincere post in 2 well-chosen Facebook groups
-- Channel 4: Pick 2 upcoming joggings, print flyers, plan to attend
+## 9. Delivery, resequenced
 
-**Target by end of week 2:** 30–40 sign-ups across both CTAs. Filter pilot applicants to the best 20 using their intake answers.
+The original plan ran three tracks in parallel and timed the partner-commitment conversation to end of week 6. With the partner unfound and outreach deferred to §8.4's trigger, the tracks are no longer parallel — they are a *now* phase and a *gated* phase.
 
-### Success criteria for recruitment
-
-- **20 confirmed pilot runners by end of week 3.**
-- 80%+ have a goal race or clear goal within 8–16 weeks.
-- 100% reachable via the in-app conversation (or WhatsApp for the iPhone-less).
-- Geographic spread: at least 3 Flemish provinces represented.
-- Age spread: at least 5 runners in the 50–65 bracket — the underserved demographic.
-
-If 20 isn't hit by end of week 3, the failure mode is almost always channel 1 — Luk held back from asking the people closest to him. Don't.
-
----
-
-## 9. The two delivery tracks, in order
-
-**Track A — the app (weeks 1–6, building toward partner commitment).**
+**Phase 1 — now: the app and the two public surfaces.** Build the demonstration, and put the parts that need no coach into the world.
 
 1. Onboarding flow design + copy
 2. Vandaag + Week + the ribbon (rendered at three plan lengths to confirm scaling)
-3. Kalender with 100 races curated
-4. Coach conversation surface
-5. Partner admin surface (functional, ugly)
+3. Kalender with 100 races curated — *and shipped publicly as the website* (the funnel spine, §8.1)
+4. Coach conversation surface (the front-end; staffed later)
+5. Partner admin surface (functional, ugly) — built ahead, so a partner can be handed a working console the day she says yes
 6. Strava read-only integration
-7. TestFlight build to partner + Luk
+7. TestFlight build, opened to the waitlist (§8.2), not just to Luk
+8. *Over ons* carrying the live call for partners (§8.3)
 
-The partner commitment conversation happens around end of week 6, when she can hold the phone.
+Phase 1 has no partner milestone inside it. Its exit is §8.4's named trigger.
 
-**Track B — recruiting (weeks 1–3, in parallel).**
+**Phase 2 — gated on a partner: recruiting + the coached pilot.** Unlocked when (a) a coaching partner has committed and (b) the §8.4 trigger is met. Then, and only then:
 
-Per §8 above. The 20 runners are confirmed by end of week 3. They're onboarded into the app and the WoZ between week 6 and week 8.
+- Runner recruiting runs per §8.5, targeting 20 confirmed within three weeks.
+- Runners are onboarded into the app and the WoZ over the following two to three weeks.
+- The 12-week WoZ pilot runs with the app as front-end and the human coaches (Luk + the partner) as backend: plan adaptation, weekly check-ins, race-day handoffs over WhatsApp where the app doesn't reach. Plan lengths vary (8–18 weeks); a buildup extending past the pilot window finishes outside it, with coaching agreed case-by-case.
 
-**Track C — the pilot itself (weeks 8–20).**
+End of Phase 2: the artifacts are the runners' completed buildups, the conversation corpus (which becomes the AI training data), and the partner's decision about whether to stay.
 
-The 12-week WoZ runs with the app as its front-end and the human coaches as its backend. Plan adaptation, weekly check-ins, race-day handoffs over WhatsApp where the app doesn't reach. Runner plan lengths vary (8–18 weeks); a runner whose plan extends past week 20 finishes their buildup outside the formal pilot window, with continued coaching agreed case-by-case.
-
-End of week 20: the pilot finishes. The artifacts are: the 20 runners' completed buildups (or their progress to date), the conversation corpus (which becomes the AI training data), and the partner's decision about whether to stay.
-
----
+The ordering risk this introduces: Phase 1 can run long while waiting for a "convinced" feeling that §8.4's trigger exists to discipline. If the trigger is met and no partner has appeared through the inbound call (§8.3), that is the signal to begin *active* partner outreach — the hard, deferred thing — not to keep polishing.
 
 ## 10. Open questions
 
