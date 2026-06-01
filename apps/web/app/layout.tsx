@@ -4,6 +4,7 @@ import './globals.css'
 import { SiteHeader } from './_components/SiteHeader'
 import { SiteFooter } from './_components/SiteFooter'
 import { JsonLd } from './_components/JsonLd'
+import { Plausible } from './_components/Plausible'
 import { pageMetadata, siteMetadata } from '@/lib/site-metadata'
 
 // Inter Variable — self-hosted from rsms/inter canonical build. Single woff2
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${inter.variable} ${sourceSerif.variable} ${jetbrainsMono.variable}`}
     >
       <body>
+        <Plausible />
         <JsonLd data={organizationSchema} />
         <SiteHeader />
         <main>{children}</main>

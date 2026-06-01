@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { PlausibleEvents, trackEvent } from '@/lib/plausible'
 
 // Interactive half of the header: active-page indication (which page am I on?)
 // via aria-current, and a hamburger toggle once the nav grew past what fits on
@@ -65,7 +66,14 @@ export function SiteNav() {
           </li>
         ))}
         <li>
-          <a href={PILOT_MAILTO} className="site-header__cta" onClick={close}>
+          <a
+            href={PILOT_MAILTO}
+            className="site-header__cta"
+            onClick={() => {
+              trackEvent(PlausibleEvents.downloadApp)
+              close()
+            }}
+          >
             Download de app
           </a>
         </li>

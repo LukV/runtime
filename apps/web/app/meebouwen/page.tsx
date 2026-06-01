@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { pageMetadata } from '@/lib/site-metadata'
+import { PlausibleEvents } from '@/lib/plausible'
 import { Page, PageHeader, Prose, Section } from '../_components/Prose'
+import { TrackedLink } from '../_components/TrackedLink'
 
 export const metadata = pageMetadata({
   title: 'Meebouwen',
@@ -122,8 +124,14 @@ export default function Meebouwen() {
           </p>
           <p>
             Herken je jezelf in een van deze rollen? Of zie je een vijfde die ik vergeet? Stuur een
-            mail naar <a href="mailto:luk@runtime.training?subject=Meebouwen">luk@runtime.training</a>.
-            Ik antwoord zelf.
+            mail naar{' '}
+            <TrackedLink
+              href="mailto:luk@runtime.training?subject=Meebouwen"
+              event={PlausibleEvents.meebouwenEmail}
+            >
+              luk@runtime.training
+            </TrackedLink>
+            . Ik antwoord zelf.
           </p>
         </Prose>
       </Section>
