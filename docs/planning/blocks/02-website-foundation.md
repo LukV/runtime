@@ -13,7 +13,7 @@ This block is **not** the calendar page or the intake page — it's the substrat
 
 Design: [[../../product-design/004-design-system-and-screens#4. The website]].
 
-**Status: 6 of 8 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31; CI shipped 2026-05-31; Nav + footer shipped 2026-05-31; Page chrome (SEO + metadata) shipped 2026-06-01. Hoe het werkt + Over ons + Privacy is next.
+**Status: 7 of 8 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31; CI shipped 2026-05-31; Nav + footer shipped 2026-05-31; Page chrome (SEO + metadata) shipped 2026-06-01; Hoe het werkt + Over ons + Meebouwen + Privacy shipped 2026-06-01. Plausible integration is next.
 
 ## Pitches
 
@@ -86,7 +86,7 @@ Schema.org markup helpers for:
 
 *Why this matters.* Calendar SEO is the whole traffic thesis. Bad metadata = bad rankings = the calendar work doesn't earn its return.
 
-### Hoe het werkt + Over ons + Privacy — *a weekend*
+### Hoe het werkt + Over ons + Privacy — *a weekend* — [[../pitches/shipped/hoe-het-werkt-over-ons-privacy|shipped 2026-06-01]]
 
 Three static pages.
 
