@@ -49,6 +49,7 @@ main {
 }
 
 .site-header__bar {
+  position: relative; /* positioning context for the mobile menu panel */
   max-width: 72rem;
   margin: 0 auto;
   padding: var(--space-3) var(--space-5);
@@ -80,8 +81,74 @@ main {
   transition: color var(--motion-transition);
 }
 
+/* Plain nav links (not the CTA pill) carry the active-page indicator: a thin
+   Inkt underline. Transparent border on the rest keeps the baseline from
+   shifting on hover/activate. */
+.site-header__nav a:not(.site-header__cta) {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
 .site-header__nav a:hover {
   color: var(--color-houtskool);
+}
+
+.site-header__nav a[aria-current='page'] {
+  color: var(--color-inkt);
+  border-bottom-color: var(--color-inkt);
+}
+
+/* Hamburger toggle — hidden on desktop, shown when the panel collapses. */
+.site-header__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: -0.5rem -0.5rem -0.5rem 0;
+  background: none;
+  border: 0;
+  color: var(--color-inkt);
+  cursor: pointer;
+}
+
+@media (max-width: 44rem) {
+  .site-header__toggle {
+    display: inline-flex;
+  }
+
+  .site-header__nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    background: var(--color-krijt);
+    border-bottom: 1px solid var(--color-stof);
+    box-shadow: 0 8px 24px rgb(13 16 20 / 0.06);
+  }
+
+  .site-header__nav[data-open] {
+    display: flex;
+  }
+
+  /* In the stacked panel an active link reads better with a side bar than an
+     underline. */
+  .site-header__nav a:not(.site-header__cta) {
+    border-bottom: 0;
+    border-left: 2px solid transparent;
+    padding: 0 0 0 var(--space-3);
+    margin-left: calc(-1 * var(--space-3) - 2px);
+  }
+
+  .site-header__nav a[aria-current='page'] {
+    border-bottom-color: transparent;
+    border-left-color: var(--color-inkt);
+  }
 }
 
 .site-header__cta {
@@ -140,4 +207,286 @@ main {
 
 .site-footer__bottom p {
   margin: 0;
+}
+
+.site-footer__links {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  font-size: 0.8125rem;
+}
+
+.site-footer__links a {
+  color: var(--color-houtskool);
+  text-decoration: none;
+  transition: color var(--motion-transition);
+}
+
+.site-footer__links a:hover {
+  color: var(--color-inkt);
+}
+
+/* ----- Content pages -----
+   Shared furniture for the static pages (Hoe het werkt, Over ons, Privacy),
+   driven by the primitives in _components/Prose.tsx. Per 004 §1: headings in
+   Inter (serif is wordmark-only), Inkt on Krijt, body in Houtskool, amber an
+   accent only. The measure caps line length for readability. */
+
+.page {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.page__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.page__eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--color-mist);
+}
+
+.page__title {
+  margin: 0;
+  color: var(--color-inkt);
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+.page__lede {
+  margin: 0;
+  color: var(--color-houtskool);
+  font-size: 1.1875rem;
+  line-height: 1.55;
+  max-width: 34rem;
+}
+
+.page__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.page__section--raised {
+  background: var(--color-stof);
+  border-radius: 0.5rem;
+  padding: var(--space-7) var(--space-6);
+}
+
+.prose {
+  max-width: 38rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  color: var(--color-houtskool);
+  font-size: 1.0625rem;
+  line-height: 1.62;
+}
+
+.prose p {
+  margin: 0;
+}
+
+.prose a {
+  color: var(--color-inkt);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+
+.prose strong {
+  color: var(--color-inkt);
+  font-weight: 600;
+}
+
+.prose em {
+  font-style: italic;
+  color: var(--color-houtskool);
+}
+
+/* Section heading inside a content page — smaller than the page title, Inkt. */
+.page__h2 {
+  margin: 0;
+  color: var(--color-inkt);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* ----- Meebouwen: the "wie we zoeken" role list ----- */
+
+.roles {
+  margin: 0;
+  max-width: 38rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.role {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.role__title {
+  margin: 0;
+  color: var(--color-inkt);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+}
+
+.role__body {
+  margin: 0;
+  color: var(--color-houtskool);
+  font-size: 1.0625rem;
+  line-height: 1.62;
+}
+
+/* ----- Hoe het werkt: the three-step loop, as a visual summary under the
+   title. Mono numerals in Inkt rings, Mist connectors. Amber stays out
+   (004 §1: "the warmth doesn't scale"). Wraps to a column on narrow screens
+   with the connector rotated downward. */
+
+.loop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.loop__step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Connector drawn before every step but the first — keeps the <ol>/<li>
+   markup valid (no stray inline elements between list items). */
+.loop__step:not(:first-child)::before {
+  content: '→';
+  color: var(--color-mist);
+  font-size: 1.125rem;
+  line-height: 1;
+  margin-right: var(--space-1);
+}
+
+.loop__num {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-mist);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-inkt);
+}
+
+.loop__label {
+  color: var(--color-inkt);
+  font-weight: 500;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 32rem) {
+  .loop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .loop__step:not(:first-child)::before {
+    content: '↓';
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+}
+
+/* ----- Hoe het werkt: numbered steps ----- */
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.step__index {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--color-mist);
+}
+
+.step__title {
+  margin: 0;
+  color: var(--color-inkt);
+  font-size: 1.625rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.step__tagline {
+  margin: 0;
+  color: var(--color-steen);
+  font-style: italic;
+  font-size: 1.0625rem;
+}
+
+/* Editorial image — used for the AI heroes and Luk's photo. The wrapper holds
+   the aspect ratio; next/image fills it. */
+.figure {
+  margin: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--color-stof);
+}
+
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure--portrait {
+  max-width: 22rem;
+}
+
+/* For transparent illustrations (the shoe sketch) — no box, no fill, no
+   rounding; the artwork sits directly on the page ground. */
+.figure--illustration {
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+}
+
+/* The brand line as a page closer — Inter italic, Inkt, sized up. */
+.page__brand-line {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--color-inkt);
 }

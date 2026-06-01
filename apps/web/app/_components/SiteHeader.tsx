@@ -1,21 +1,12 @@
 import Link from 'next/link'
 import { Wordmark } from './Wordmark'
+import { SiteNav } from './SiteNav'
 
-// Per 004 §1 / §4 — wordmark left, four right-side items, transparent on
-// the body's Krijt ground with just a thin Mist divider beneath. The amber
-// (Eerste licht) is reserved for accent dots — wordmark period and ribbon
-// dot — never for chrome buttons (004 §1: "the warmth doesn't scale").
-//
-// "Download de app" is a mailto: as a poor-man's waitlist until the pilot
-// intake pitch wires a real /pilot route.
-const NAV_ITEMS = [
-  { label: 'Kalender', href: '/' },
-  { label: 'Hoe het werkt', href: '/hoe-het-werkt' },
-  { label: 'Over ons', href: '/over-ons' },
-] as const
-
-const PILOT_MAILTO = 'mailto:luk@runtime.training?subject=Pilot'
-
+// Per 004 §1 / §4 — wordmark left, nav right, transparent on the body's Krijt
+// ground with just a thin divider beneath. The amber (Eerste licht) is reserved
+// for accent dots — wordmark period and ribbon dot — never for chrome buttons
+// (004 §1: "the warmth doesn't scale"). The interactive nav (active-page state +
+// mobile hamburger) lives in the SiteNav client island.
 export function SiteHeader() {
   return (
     <header className="site-header">
@@ -23,20 +14,7 @@ export function SiteHeader() {
         <Link href="/" aria-label="runtime — naar de homepage" className="site-header__wordmark">
           <Wordmark size="header" theme="light" />
         </Link>
-        <nav aria-label="Hoofdnavigatie">
-          <ul className="site-header__nav">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
-              </li>
-            ))}
-            <li>
-              <a href={PILOT_MAILTO} className="site-header__cta">
-                Download de app
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <SiteNav />
       </div>
     </header>
   )
