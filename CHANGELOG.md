@@ -1,3 +1,14 @@
+## v0.5.0 (2026-06-01)
+
+### Feat
+
+- **web**: page chrome — SEO metadata, OG image, robots, sitemap, JSON-LD
+
+### Fix
+
+- **web**: footer brand-line stacks under wordmark, header hairline softens
+- **web**: match SiteHeader to 004 §4 — transparent on Krijt with hairline
+
 ## v0.4.0 (2026-05-31)
 
 ### Feat
