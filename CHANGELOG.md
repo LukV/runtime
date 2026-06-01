@@ -1,3 +1,9 @@
+## v0.8.0 (2026-06-01)
+
+### Feat
+
+- **web**: add Sentry error monitoring (Next.js, errors-only)
+
 ## v0.7.0 (2026-06-01)
 
 ### Feat
