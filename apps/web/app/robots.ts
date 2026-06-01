@@ -3,7 +3,7 @@ import { siteMetadata } from '@/lib/site-metadata'
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: '*', allow: '/' },
+    rules: { userAgent: '*', allow: '/', disallow: '/sentry-example-page' },
     sitemap: `${siteMetadata.baseUrl}/sitemap.xml`,
   }
 }
