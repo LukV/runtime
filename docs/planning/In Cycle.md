@@ -2,7 +2,7 @@
 project: runtime
 type: planning-current-cycle
 status: active
-updated: 2026-05-31
+updated: 2026-06-01
 ---
 # In Cycle
 
@@ -16,9 +16,9 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 *Nothing in cycle yet.*
 
-**Block 2: 5 of 8 slots shipped.** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31), Nav + footer (2026-05-31). Page chrome (SEO + metadata) is next.
-
 See the on-deck list below for the next pickup.
+
+**Block 2: 6 of 8 slots shipped.** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31), Nav + footer (2026-05-31), Page chrome / SEO + metadata (2026-06-01).
 
 ## On deck
 
@@ -26,10 +26,9 @@ Block 2's queue. Order:
 
 ### Block 2 — website foundation
 
-1. **Page chrome: SEO defaults + metadata helper** — *an evening*.
-2. **Hoe het werkt + Over ons + Privacy** — *a weekend*.
-3. **Plausible integration** — *an evening*.
-4. **Sentry** — *an evening*.
+1. **Hoe het werkt + Over ons + Privacy** — *a weekend*.
+2. **Plausible integration** — *an evening*.
+3. **Sentry** — *an evening*.
 
 The slot framings in [[blocks/02-website-foundation]] are detailed enough for several of these to start without a full pitch note — write the file when the shape isn't obvious.
 

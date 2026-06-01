@@ -13,7 +13,7 @@ This block is **not** the calendar page or the intake page — it's the substrat
 
 Design: [[../../product-design/004-design-system-and-screens#4. The website]].
 
-**Status: 5 of 8 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31; CI shipped 2026-05-31; Nav + footer shipped 2026-05-31. Page chrome (SEO + metadata) is next.
+**Status: 6 of 8 slots shipped.** Monorepo scaffold pulled forward in block 1 (2026-05-27, v0.1.0); Vercel project setup + domain/DNS/mail-auth shipped together on 2026-05-31; CI shipped 2026-05-31; Nav + footer shipped 2026-05-31; Page chrome (SEO + metadata) shipped 2026-06-01. Hoe het werkt + Over ons + Privacy is next.
 
 ## Pitches
 
@@ -75,7 +75,7 @@ Top nav: Source Serif wordmark left, *Kalender · Hoe het werkt · Over ons · K
 
 *Open question.* The "Krijg de app" CTA in early weeks — before the app is in the App Store, what does this button do? Default: link to the pilot landing until launch is closer. Revisit when TestFlight builds exist.
 
-### Page chrome: SEO defaults + metadata helper — *an evening*
+### Page chrome: SEO defaults + metadata helper — *an evening* — [[../pitches/shipped/page-chrome-seo-metadata|shipped 2026-06-01]]
 
 Next.js metadata API with sensible defaults for every page: title template (`{page title} · runtime.training`), description, OpenGraph image (a square ink card with the wordmark), Twitter card. Per-page overrides are one prop away.
 
