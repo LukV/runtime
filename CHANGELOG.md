@@ -1,3 +1,10 @@
+## v0.9.0 (2026-06-02)
+
+### Feat
+
+- **api**: race + organizer data model with RLS
+- **api**: scaffold FastAPI backend
+
 ## v0.8.0 (2026-06-01)
 
 ### Feat
