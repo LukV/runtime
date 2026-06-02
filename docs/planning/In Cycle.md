@@ -14,9 +14,13 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 ## Currently in cycle
 
-*Nothing in cycle yet.*
+### [[pitches/fastapi-race-endpoints]] — appetite: a weekend
 
-See the on-deck list below for the next pickup.
+Started 2026-06-02.
+
+The public read API over the race schema: `GET /api/races/upcoming`, `/races` (paginated + province/distance/month/race_type filters), `/races/{slug}` (full detail, live + edition_past), and `/races/related/{slug}`. Two response shapes (lightweight `RaceSummary`, full `RaceDetail` with a `PublicOrganizer` that omits `contact_email`), distance filtering resolved as query-time JSONB, and a data-access layer overridable in tests so CI needs no database. Load-bearing rule: the endpoints filter `status` themselves (FastAPI bypasses RLS as the `postgres` role). Done = the four endpoints serve from the DB, drafts 404, gates + CI green; the calendar pages can build against them.
+
+**Cap reached on:** *2026-06-08 (Monday EOD — the upcoming weekend, rounded forward).*
 
 **Block 2: complete — 9 of 9 slots shipped (2026-06-01).** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31), Nav + footer (2026-05-31), Page chrome / SEO + metadata (2026-06-01), Hoe het werkt + Over ons + Meebouwen + Privacy (2026-06-01), Plausible analytics (2026-06-01), Sentry error monitoring (2026-06-01). The website foundation is done — next is [[blocks/03-race-calendar]], the traffic engine.
 
@@ -26,11 +30,14 @@ Block 2 is closed. Next block is [[blocks/03-race-calendar]] — the traffic eng
 
 ### Block 3 — race calendar
 
-The schema slot is now in cycle as [[pitches/race-data-model]] (it superseded the original "races, organizers, race_submissions" framing). Next after it:
+The schema slot shipped ([[pitches/shipped/race-data-model]]); the race endpoints are now in cycle ([[pitches/fastapi-race-endpoints]]). Next after them, in rough order:
 
-1. **FastAPI race endpoints** — *a weekend*. The public read API (`GET /api/races`, `/{slug}`, `/upcoming`, `/related`) over the new schema. Settles the distance-filtering mechanism the schema pitch punted on.
+1. **The calendar index page** — *a weekend*. `runtime.training/` as the calendar, reading `/api/races/upcoming` at build time.
+2. **The race detail page** — *a week of evenings*. The SEO money page (`/wedstrijd/{slug}`). Needs its own design session first.
+3. **Province + distance index pages** — *a weekend*. Scoped calendar views with editorial intros.
+4. **Race data curation** — *ongoing*. Get 25 races up, then launch.
 
-The slot framings in [[blocks/03-race-calendar]] carry the detail; write a pitch note when the shape isn't obvious.
+The slot framings in [[blocks/03-race-calendar]] carry the detail; write a pitch note when the shape isn't obvious (the detail page qualifies).
 
 ### Optional follow-ups (no pitch yet)
 
