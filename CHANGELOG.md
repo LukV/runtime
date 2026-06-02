@@ -1,3 +1,9 @@
+## v0.10.0 (2026-06-02)
+
+### Feat
+
+- **api**: public race read endpoints
+
 ## v0.9.0 (2026-06-02)
 
 ### Feat
