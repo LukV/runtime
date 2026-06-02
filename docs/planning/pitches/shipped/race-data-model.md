@@ -1,11 +1,12 @@
 ---
 project: runtime
 type: pitch
-status: in-cycle
+status: shipped
 area: calendar
 appetite: a weekend
 created: 2026-06-02
 started: 2026-06-02
+shipped_on: 2026-06-02
 ---
 # Race data model + schema foundation
 
@@ -135,4 +136,8 @@ Mechanism is already decided ([[../../architecture/001-stack-decisions]]): web r
 
 ## What actually happened
 
-*(Fill in when the pitch ships or is dropped.)*
+The data layer landed end-to-end in a single sitting, well inside the weekend cap. The first `supabase/migrations/` migration created `races`, `organizers`, and `profiles` (with the `race_type` / `province` / `race_status` / `organizer_type` / `user_role` enums), multilingual `title`/`description` as JSONB-per-locale, and the matching Pydantic models (`Race`/`Distance`/`Location`, `Organizer`, `Profile`, plus a `Translated` helper). It applies cleanly both locally (`supabase db reset`) and against the cloud project (`supabase db push`, migration list synced), with API gates and CI green and FastAPI reporting `database: up` against the local stack.
+
+The security stance came out *cleaner* than the original sketch: instead of a public-read RLS policy, we went **deny-by-default** on `races`/`organizers` (no anon policies at all), because every read goes through FastAPI as the `postgres` role, which bypasses RLS — verified locally that the anon role sees zero rows even for a `live` race. Luk's admin profile is bootstrapped in the cloud via an email-lookup insert (the on-signup trigger stayed deferred — one manual row is enough for the pilot).
+
+Deferred on purpose: the FastAPI JWT/role gate (waits for the first write endpoint, block 6/8), the on-signup `profiles` trigger, and the distance-filter mechanism for the `/10km` pages (a call for the endpoints slot). Surprises worth remembering: Supabase's direct DB host is **IPv6-only** — use the Session pooler for Railway/IPv4, not the IPv4 add-on; **RLS, not FastAPI, is the real security boundary** because of the PostgREST anon surface; and `supabase link` must run from the repo root or it doesn't attach to the project. To watch: `created_by`/`updated_by` are nullable and will mostly be null while curation runs through the Supabase Dashboard.

@@ -14,13 +14,9 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 ## Currently in cycle
 
-### [[pitches/race-data-model]] — appetite: a weekend
+*Nothing in cycle yet.*
 
-Started 2026-06-02.
-
-The first slice of the calendar's data layer: the Postgres schema for `races` and `organizers` (multilingual, JSONB-per-locale), the matching Pydantic models, and RLS as the security boundary (public reads narrow to `status = 'live'`, no public writes). Auth is *foreseen* — roles + audit FKs + Supabase Auth enabled + Luk bootstrapped as admin — but the JWT/role-gate code is deferred to the first write endpoint. Done = the first `supabase/migrations/` migration applies cleanly with RLS on, and the models exist for the read-endpoints slot to return.
-
-**Cap reached on:** *2026-06-08 (Monday EOD — the upcoming weekend, rounded forward).*
+See the on-deck list below for the next pickup.
 
 **Block 2: complete — 9 of 9 slots shipped (2026-06-01).** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31), Nav + footer (2026-05-31), Page chrome / SEO + metadata (2026-06-01), Hoe het werkt + Over ons + Meebouwen + Privacy (2026-06-01), Plausible analytics (2026-06-01), Sentry error monitoring (2026-06-01). The website foundation is done — next is [[blocks/03-race-calendar]], the traffic engine.
 
