@@ -1,11 +1,12 @@
 ---
 project: runtime
 type: pitch
-status: in-cycle
+status: shipped
 area: calendar
 appetite: a weekend
 created: 2026-06-02
 started: 2026-06-02
+shipped_on: 2026-06-02
 ---
 # FastAPI race endpoints
 
@@ -73,4 +74,8 @@ A thin data-access module (functions taking the asyncpg pool) behind an injectab
 
 ## What actually happened
 
-*(Fill in when the pitch ships or is dropped.)*
+All four read endpoints landed inside the weekend cap (same day, in fact): `/upcoming`, `/races` (paginated, with `province`/`distance`/`month`/`race_type` filters that compose), `/races/{slug}`, and `/races/related/{slug}` — returning `RaceSummary` for lists and `RaceDetail` for the money page, with a `PublicOrganizer` that never serializes `contact_email`. The data layer is a `RaceRepository` protocol with an asyncpg implementation; routes depend on the protocol, so the four route tests fake it and `api-ci` runs with no database. The distance filter went the simple way as planned — query-time over the `distances` JSONB, no index, no migration — and a pool-level json/jsonb codec lets `title`/`distances` decode straight into the models.
+
+The load-bearing rule held: because FastAPI connects as `postgres` and bypasses RLS, every query filters `status` itself. Verified against a seeded local DB — drafts 404, a live race embeds its organizer without the contact email, and the province/distance filters return exactly what they should. Nothing was cut.
+
+Deferred as scoped: the Next.js pages that consume these, ISR/cache invalidation (waits for write endpoints to exist), and seeding real races. To watch: the query-time JSONB distance filter is fine at calendar scale but is the first thing to index (a GIN-backed array) if the table grows large; and `/upcoming` is bounded to ~6 months, so far-future races surface only via `/races`.

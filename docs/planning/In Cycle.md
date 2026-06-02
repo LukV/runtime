@@ -14,13 +14,9 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 ## Currently in cycle
 
-### [[pitches/fastapi-race-endpoints]] — appetite: a weekend
+*Nothing in cycle yet.*
 
-Started 2026-06-02.
-
-The public read API over the race schema: `GET /api/races/upcoming`, `/races` (paginated + province/distance/month/race_type filters), `/races/{slug}` (full detail, live + edition_past), and `/races/related/{slug}`. Two response shapes (lightweight `RaceSummary`, full `RaceDetail` with a `PublicOrganizer` that omits `contact_email`), distance filtering resolved as query-time JSONB, and a data-access layer overridable in tests so CI needs no database. Load-bearing rule: the endpoints filter `status` themselves (FastAPI bypasses RLS as the `postgres` role). Done = the four endpoints serve from the DB, drafts 404, gates + CI green; the calendar pages can build against them.
-
-**Cap reached on:** *2026-06-08 (Monday EOD — the upcoming weekend, rounded forward).*
+See the on-deck list below for the next pickup.
 
 **Block 2: complete — 9 of 9 slots shipped (2026-06-01).** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31), Nav + footer (2026-05-31), Page chrome / SEO + metadata (2026-06-01), Hoe het werkt + Over ons + Meebouwen + Privacy (2026-06-01), Plausible analytics (2026-06-01), Sentry error monitoring (2026-06-01). The website foundation is done — next is [[blocks/03-race-calendar]], the traffic engine.
 
