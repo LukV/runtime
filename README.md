@@ -10,7 +10,7 @@ Architecture decisions live in [`docs/architecture/001-stack-decisions.md`](docs
 runtime/
 ├── apps/
 │   ├── web/              Next.js — public site + /coach + /organizers
-│   ├── api/              FastAPI (lands in Block 6)
+│   ├── api/              FastAPI public API
 │   └── ios/              SwiftUI (lands in Block 5)
 ├── packages/
 │   ├── design-tokens/    Color, spacing, type, motion — single source of truth
