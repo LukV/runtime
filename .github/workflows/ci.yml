@@ -37,6 +37,7 @@ jobs:
               - '.github/workflows/ci.yml'
             api:
               - 'apps/api/**'
+              - '.github/workflows/ci.yml'
             ios:
               - 'apps/ios/**'
 
@@ -80,15 +81,27 @@ jobs:
         env:
           PREVIEW_URL: ${{ steps.vercel.outputs.url }}
 
-  # Placeholder — wakes up automatically when apps/api/ lands (block 6).
-  # Will run: uv sync, ruff check, ruff format --check, mypy, pytest.
   api-ci:
     needs: changes
     if: needs.changes.outputs.api == 'true'
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/api
     steps:
       - uses: actions/checkout@v6
-      - run: echo "apps/api/ not yet created; this job is a stub until block 6"
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      # uv reads apps/api/.python-version and downloads the interpreter.
+      - run: uv sync --frozen
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run mypy app
+      - run: uv run pytest -q
+      # Docker build verification (architecture §CI) — confirms the image
+      # builds; Railway builds and deploys its own on push to main.
+      - run: docker build -t runtime-api:ci .
 
   # Placeholder — wakes up automatically when apps/ios/ lands (block 5).
   # Will run: swiftlint, xcodebuild. macos-latest is billed at 10× ubuntu;
