@@ -13,6 +13,7 @@ from uuid import UUID
 from pydantic import BaseModel, Field
 
 from app.models.common import Province, RaceStatus, RaceType, Translated
+from app.models.organizer import PublicOrganizer
 
 
 class Distance(BaseModel):
@@ -53,3 +54,24 @@ class Race(BaseModel):
     updated_at: datetime
     created_by: UUID | None = None
     updated_by: UUID | None = None
+
+
+class RaceSummary(BaseModel):
+    """Lightweight row for list/calendar views — no joins, no editorial body."""
+
+    id: UUID
+    slug: str
+    race_type: RaceType
+    title: Translated
+    date: date
+    start_time: time | None = None
+    distances: list[Distance] = Field(default_factory=list)
+    city: str
+    province: Province | None = None
+    image_url: str | None = None
+
+
+class RaceDetail(Race):
+    """Full race for the detail page, with the public organizer embedded."""
+
+    organizer: PublicOrganizer | None = None

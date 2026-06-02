@@ -11,9 +11,9 @@ from app.models.common import (
     UserRole,
     localized,
 )
-from app.models.organizer import Organizer
+from app.models.organizer import Organizer, PublicOrganizer
 from app.models.profile import Profile
-from app.models.race import Distance, Location, Race
+from app.models.race import Distance, Location, Race, RaceDetail, RaceSummary
 
 __all__ = [
     "DEFAULT_LOCALE",
@@ -24,8 +24,11 @@ __all__ = [
     "OrganizerType",
     "Profile",
     "Province",
+    "PublicOrganizer",
     "Race",
+    "RaceDetail",
     "RaceStatus",
+    "RaceSummary",
     "RaceType",
     "Translated",
     "UserRole",

@@ -13,6 +13,7 @@ from app import __version__
 from app.config import get_settings
 from app.db import create_pool
 from app.routes.health import router as health_router
+from app.routes.races import router as races_router
 from app.state import AppState
 
 logger = logging.getLogger("runtime.api")
@@ -46,6 +47,7 @@ def create_app() -> FastAPI:
     )
 
     app.include_router(health_router, prefix="/api")
+    app.include_router(races_router, prefix="/api")
     return app
 
 

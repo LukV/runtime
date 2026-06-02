@@ -23,3 +23,13 @@ class Organizer(BaseModel):
     updated_at: datetime
     created_by: UUID | None = None
     updated_by: UUID | None = None
+
+
+class PublicOrganizer(BaseModel):
+    """The organizer fields safe to expose on a public race page — notably
+    without `contact_email`."""
+
+    id: UUID
+    name: str
+    type: OrganizerType
+    website: str | None = None

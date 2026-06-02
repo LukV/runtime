@@ -8,11 +8,20 @@ service from booting; health surfaces the degraded state instead.
 
 from __future__ import annotations
 
+import json
 import logging
 
 import asyncpg
 
 logger = logging.getLogger("runtime.api.db")
+
+
+async def _init_connection(conn: asyncpg.Connection) -> None:
+    """Decode json/jsonb to Python objects (dict/list) instead of raw strings,
+    so multilingual `title` and the `distances` array map straight into the
+    Pydantic models."""
+    await conn.set_type_codec("jsonb", encoder=json.dumps, decoder=json.loads, schema="pg_catalog")
+    await conn.set_type_codec("json", encoder=json.dumps, decoder=json.loads, schema="pg_catalog")
 
 
 async def create_pool(database_url: str | None) -> asyncpg.Pool | None:
@@ -22,7 +31,7 @@ async def create_pool(database_url: str | None) -> asyncpg.Pool | None:
         logger.info("DATABASE_URL not set — starting without a database pool")
         return None
     try:
-        pool = await asyncpg.create_pool(database_url, min_size=2, max_size=10)
+        pool = await asyncpg.create_pool(database_url, min_size=2, max_size=10, init=_init_connection)
         logger.info("Created asyncpg pool (min=2, max=10)")
         return pool
     except Exception:  # noqa: BLE001 — any pool failure is non-fatal; degrade, don't crash
