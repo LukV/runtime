@@ -1,11 +1,12 @@
 ---
 project: runtime
 type: pitch
-status: in-cycle
+status: shipped
 area: calendar
 appetite: an evening
 created: 2026-06-02
 started: 2026-06-03
+shipped_on: 2026-06-03
 ---
 # Race data import pipeline
 
@@ -90,4 +91,8 @@ The seed CSV lives in the repo (public). A contributor fills a copy — a shared
 
 ## What actually happened
 
-*(Fill in when the pitch ships or is dropped.)*
+Shipped in one sitting, but the appetite was really spent on the *model*, not the machine. The importer itself was straightforward; what took the rounds was real data pushing back on the schema. We started with the six planned refinements, then live races kept exposing gaps: Walloon/Brussels races meant going Belgium-wide (province enum → 11); multi-day events with distances split across days needed `Distance.date` and an ISO-datetime form in the mini-syntax; organiser pages wanted a `homepage` and a venue `location_label`; and a single free-form `tags[]` replaced the narrower `terrain` idea. Each addition was cheap because we hadn't committed yet — the migration stayed one file and we just kept re-running `supabase db reset`.
+
+Two things worth remembering. First, the read `Race` model can't double as the import shape (it requires DB-generated `id`/timestamps), so there's a thin `RaceImport` reusing the same `Distance`/`Location`/enums — the schema stays the single source of truth without contorting the read model. Second, real non-integer distances surfaced a latent bug: the list filter compared `(km)::numeric = $float`, which never matched 21.1 because binding a Python float as numeric expands its binary error; switched to `double precision`. The mini-syntax handled everything thrown at it (relays, loops, kids runs, 100 km walks, per-day starts), but it's clearly near its readability ceiling — if most races look like the Flandrientrail one-liner, a structured per-race format is a future pitch, not this one.
+
+Cut as planned: organizer-entity linking, scraping/Claude-drafting, the authenticated portal, and the index page. *Not* cut, and the nice surprise: Luk curated 40 real races (all 11 provinces, June 2026 → Feb 2027) by hand into the CSV — so this didn't just prove the tool, it produced the launch dataset. Watch: no coordinates anywhere yet (geocoding is a later job), and the seed file is still named `races.sample.csv` though it now holds real data.
