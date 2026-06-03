@@ -14,9 +14,13 @@ When a pitch ships, move it to `pitches/shipped/` and update [[Released]] if the
 
 ## Currently in cycle
 
-*Nothing in cycle yet.*
+### [[pitches/race-data-import-pipeline]] — appetite: an evening
 
-See the on-deck list below for the next pickup.
+Started 2026-06-03.
+
+The endpoints work but the `races` table is empty, and the calendar index page can't ship against nothing. This builds the machine to get real races *in*, build-in-public: a small schema refinement (province enum → 11, `end_date`, `price_info`, optional `Distance.km`, `edition`, free-form `tags`) shaken out by real June data, then a schema-shaped CSV and an idempotent, `--dry-run`-capable importer that validates each row through the Pydantic `Race` model and upserts by `slug`. Luk stays the gatekeeper; no contributor touches a credential. **Done** = the migration applied local+cloud, the importer + a small committed sample CSV proving it end-to-end, all gates green.
+
+**Cap reached on:** *2026-06-04 (Thu, end of day)*
 
 **Block 2: complete — 9 of 9 slots shipped (2026-06-01).** Monorepo scaffold (2026-05-27), Vercel + domain/DNS/mail-auth (2026-05-31), CI (2026-05-31), Nav + footer (2026-05-31), Page chrome / SEO + metadata (2026-06-01), Hoe het werkt + Over ons + Meebouwen + Privacy (2026-06-01), Plausible analytics (2026-06-01), Sentry error monitoring (2026-06-01). The website foundation is done — next is [[blocks/03-race-calendar]], the traffic engine.
 

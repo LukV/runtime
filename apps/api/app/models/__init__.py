@@ -13,7 +13,7 @@ from app.models.common import (
 )
 from app.models.organizer import Organizer, PublicOrganizer
 from app.models.profile import Profile
-from app.models.race import Distance, Location, Race, RaceDetail, RaceSummary
+from app.models.race import Distance, Location, Race, RaceDetail, RaceImport, RaceSummary
 
 __all__ = [
     "DEFAULT_LOCALE",
@@ -27,6 +27,7 @@ __all__ = [
     "PublicOrganizer",
     "Race",
     "RaceDetail",
+    "RaceImport",
     "RaceStatus",
     "RaceSummary",
     "RaceType",

@@ -32,11 +32,20 @@ class RaceType(StrEnum):
 
 
 class Province(StrEnum):
+    # Flanders
     ANTWERPEN = "antwerpen"
     OOST_VLAANDEREN = "oost-vlaanderen"
     WEST_VLAANDEREN = "west-vlaanderen"
     LIMBURG = "limburg"
     VLAAMS_BRABANT = "vlaams-brabant"
+    # Brussels
+    BRUSSEL = "brussel"
+    # Wallonia
+    WAALS_BRABANT = "waals-brabant"
+    HENEGOUWEN = "henegouwen"
+    LUIK = "luik"
+    LUXEMBURG = "luxemburg"
+    NAMEN = "namen"
 
 
 class RaceStatus(StrEnum):

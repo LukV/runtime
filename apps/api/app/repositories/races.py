@@ -25,16 +25,19 @@ from app.models import (
 )
 
 # Columns for the lightweight summary shape.
-_SUMMARY_COLS = "id, slug, race_type, title, date, start_time, distances, city, province, image_url"
+_SUMMARY_COLS = (
+    "id, slug, race_type, title, date, end_date, start_time, distances, city, province, edition, tags, image_url"
+)
 _SUMMARY_COLS_R = ", ".join(f"r.{c}" for c in _SUMMARY_COLS.split(", "))
 
 # Full detail: explicit race columns + the public organizer, joined once.
 _DETAIL_SQL = """
     select
-        r.id, r.slug, r.race_type, r.title, r.description, r.date, r.start_time,
-        r.distances, r.price_eur, r.registration_url, r.image_url,
+        r.id, r.slug, r.race_type, r.title, r.description, r.date, r.end_date, r.start_time,
+        r.distances, r.price_eur, r.price_info, r.edition, r.tags,
+        r.homepage, r.registration_url, r.image_url,
         r.organizer_id, r.organizer_name,
-        r.country, r.province, r.city, r.postal_code, r.street, r.house_nr, r.lat, r.lng,
+        r.location_label, r.country, r.province, r.city, r.postal_code, r.street, r.house_nr, r.lat, r.lng,
         r.status, r.created_at, r.updated_at, r.created_by, r.updated_by,
         o.id as org_id, o.name as org_name, o.type as org_type, o.website as org_website
     from races r
@@ -50,10 +53,13 @@ def _summary(row: asyncpg.Record) -> RaceSummary:
         race_type=row["race_type"],
         title=row["title"],
         date=row["date"],
+        end_date=row["end_date"],
         start_time=row["start_time"],
         distances=row["distances"],
         city=row["city"],
         province=row["province"],
+        edition=row["edition"],
+        tags=row["tags"],
         image_url=row["image_url"],
     )
 
@@ -68,6 +74,7 @@ def _detail(row: asyncpg.Record) -> RaceDetail:
             website=row["org_website"],
         )
     location = Location(
+        label=row["location_label"],
         country=row["country"],
         city=row["city"],
         province=row["province"],
@@ -84,9 +91,14 @@ def _detail(row: asyncpg.Record) -> RaceDetail:
         title=row["title"],
         description=row["description"],
         date=row["date"],
+        end_date=row["end_date"],
         start_time=row["start_time"],
         distances=row["distances"],
         price_eur=row["price_eur"],
+        price_info=row["price_info"],
+        edition=row["edition"],
+        tags=row["tags"],
+        homepage=row["homepage"],
         registration_url=row["registration_url"],
         image_url=row["image_url"],
         organizer_id=row["organizer_id"],
@@ -161,8 +173,13 @@ class PostgresRaceRepository:
             conds.append(f"to_char(date, 'YYYY-MM') = ${len(args)}")
         if distance is not None:
             args.append(distance)
+            # Compare as double precision: binding a float param as ::numeric
+            # would expand its binary-float error (21.1 -> 21.1000000000000014)
+            # and never match the exact stored value. float8 routes both sides
+            # through the same representation.
             conds.append(
-                f"exists (select 1 from jsonb_array_elements(distances) d where (d->>'km')::numeric = ${len(args)})"
+                f"exists (select 1 from jsonb_array_elements(distances) d "
+                f"where (d->>'km')::double precision = ${len(args)})"
             )
         where = " and ".join(conds)
         list_sql = (
