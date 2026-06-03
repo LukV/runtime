@@ -1,3 +1,9 @@
+## v0.11.0 (2026-06-03)
+
+### Feat
+
+- **api**: race import pipeline + schema refinements
+
 ## v0.10.0 (2026-06-02)
 
 ### Feat
